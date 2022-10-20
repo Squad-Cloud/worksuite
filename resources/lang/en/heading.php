@@ -2,6 +2,7 @@
  
  
 return [
-    'name' => 'Name',
-    'age' => 'Age',
+    'email' => 'Email',
+    'password' => 'Password',
+    'sign_heading' => 'Sign in to your account'
 ];
