@@ -15,7 +15,7 @@
                         </div>
                     @endif
                     <div class="form-group">
-                        <label for="">@lang('heading.name')</label>
+                        <label for="">@lang('heading.nam;e')</label>
                         <input type="text" name="" id="">
                     </div>
                     
