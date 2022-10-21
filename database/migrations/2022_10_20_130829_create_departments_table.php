@@ -15,7 +15,8 @@ class CreateDepartmentsTable extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string('name',20)->unique();
+            $table->bigInteger('user_id')->unique()->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->bigInteger('designation_id')->unique()->unsigned();
             $table->foreign('designation_id')->references('id')->on('designations');
             $table->integer('active')->default();

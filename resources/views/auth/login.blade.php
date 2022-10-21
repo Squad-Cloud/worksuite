@@ -34,7 +34,7 @@ Contact: contact@hencework.com
 							<div class="auth-content flex-column pt-8 pb-md-8 pb-13">
 								<div class="text-center mb-7">
 									<a class="navbar-brand me-0" href="#">
-										<img class="brand-img d-inline-block" src="dist/img/juri-logo.png" alt="brand" width="150" height="48">
+										<img class="brand-img d-inline-block" src="{{asset('assets/dist/img/juri-logo.png')}}" alt="brand" width="150" height="48">
 									</a>
 								</div>
 								<form class="w-100" method="POST" action="{{ route('login') }}">
@@ -42,7 +42,7 @@ Contact: contact@hencework.com
 									<div class="row">
 										<div class="col-xl-7 col-sm-10 mx-auto">
 											<div class="text-center mb-4">
-												<h4>Sign in to your account</h4>
+												<h4>@lang('heading.sign-heading')</h4>
 												<p>Lorem Ipsum available, in some form, by injected humour nother uperso kinto</p>
 											</div>
 											<div class="row gx-3">
@@ -61,15 +61,15 @@ Contact: contact@hencework.com
 												<div class="form-group col-lg-12">
 													<div class="form-label-group">
 														<label>@lang('heading.password')</label>
-														<a href="#" class="fs-7 fw-medium">Forgot Password ?</a>
+														<a href="#" class="fs-7 fw-medium">@lang('heading.forget-password')</a>
 													</div>
 													<div class="input-group password-check">
 														<span class="input-affix-wrapper affix-wth-text">
 															<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 															
 															<a href="#" class="input-suffix text-primary text-uppercase fs-8 fw-medium">
-																<span>Show</span>
-																<span class="d-none">Hide</span>
+																<span>@lang('heading.show')</span>
+																<span class="d-none">@lang('heading.hide')</span>
 															</a>
 															@error('password')
 																<span class="invalid-feedback" role="alert">
@@ -83,15 +83,15 @@ Contact: contact@hencework.com
 											<div class="d-flex justify-content-center">
 												<div class="form-check form-check-sm mb-3">
 													<input type="checkbox" class="form-check-input" id="logged_in" checked>
-													<label class="form-check-label text-muted fs-7" for="logged_in">Keep me logged in</label>
+													<label class="form-check-label text-muted fs-7" for="logged_in">@lang('heading.remember-me')</label>
 												</div>
 											</div>
-											{{-- <a href="#" class="btn btn-primary btn-uppercase btn-block">Login</a> --}}
+											{{-- <a href="#" class="btn btn-primary btn-uppercase btn-block">@lang('heading.login')</a> --}}
 											<button type="submit" class="btn btn-primary btn-uppercase btn-block">
-												Login
+											@lang('heading.login')
 											</button>
-											<p class="p-xs mt-2 text-center">New to JurisLPM? <a href="#"><u>Create new account</u></a></p>
-											<a href="#" class="d-block extr-link text-center mt-4"><span class="feather-icon"><i data-feather="external-link"></i></span><u class="text-muted">Send feedback to our help forum</u></a>
+											<p class="p-xs mt-2 text-center">@lang('heading.new-to-jurislpm?') <a href="{{route('register')}}"><u>@lang('heading.new-account')</u></a></p>
+											<a href="#" class="d-block extr-link text-center mt-4"><span class="feather-icon"><i data-feather="external-link"></i></span><u class="text-muted">@lang('heading.feedback')</u></a>
 										</div>
 									</div>
 								</form>
@@ -101,7 +101,7 @@ Contact: contact@hencework.com
 								<footer class="container-xxl footer">
 									<div class="row">
 										<div class="col-xl-8 text-center">
-											<p class="footer-text pb-0"><span class="copy-text">JurisLPM © 2022 All rights reserved.</span> <a href="#" class="" target="_blank">Privacy Policy</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">T&C</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">System Status</a></p>
+											<p class="footer-text pb-0"><span class="copy-text">@lang('heading.footer-text')</span> <a href="#" class="" target="_blank">@lang('heading.privacy-policy')</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">@lang('heading.t&c')</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">@lang('heading.system-status')</a></p>
 										</div>
 									</div>
 								</footer>
@@ -112,14 +112,14 @@ Contact: contact@hencework.com
 							<div class="auth-content flex-column text-center py-8">
 								<div class="row">
 									<div class="col-xxl-7 col-xl-8 col-lg-11 mx-auto">
-										<h2 class="mb-4">Meet all new Pro JurisLPM 2.0</h2>
+										<h2 class="mb-4">@lang('heading.meeting')</h2>
 										<p>There are many variations of passages of Lorem Ipsum available, passages of Lorem Ipsum available, in some form, by injected.</p>
-										<button class="btn  btn-flush-primary btn-uppercase mt-2">Take Tour</button>
+										<button class="btn  btn-flush-primary btn-uppercase mt-2">@lang('heading.take-tour')</button>
 									</div>
 								</div>
-								<img src="dist/img/macaroni-logged-out.png"  class="img-fluid w-sm-50 mt-7" alt="login"/>
+								<img src="{{asset('assets/dist/img/macaroni-logged-out.png')}}"  class="img-fluid w-sm-50 mt-7" alt="login"/>
 							</div>
-							<p class="p-xs credit-text opacity-55">All illustration are powered by <a href="#" target="_blank" class="text-light"><u>Icons8</u></a></p>
+							<p class="p-xs credit-text opacity-55">@lang('heading.footer') <a href="#" target="_blank" class="text-light"><u>@lang('heading.icons8')</u></a></p>
 						</div>
 					</div>
 					<!-- /Row -->

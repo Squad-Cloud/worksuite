@@ -31,34 +31,34 @@ Contact: contact@hencework.com
 					<!-- Row -->
 					<div class="row auth-split">
 						<div class="col-xl-5 col-lg-6 col-md-5 d-md-block d-none bg-primary-dark-3 bg-opacity-85 position-relative">
-							<img class="bg-img" src="dist/img/signup-bg.jpg" alt="bg-img">
+							<img class="bg-img" src="{{asset('assets/dist/img/signup-bg.jpg')}}" alt="bg-img">
 							<div class="auth-content py-8">
 								<div class="row">
 									<div class="col-xxl-8 mx-auto">
 										<div class="text-center">
-											<h3 class="text-white mb-2">High quality JurisLPM template for your next web project.</h3>
+											<h3 class="text-white mb-2">@lang('heading.sign-up-heading')</h3>
 											
 										</div>
 										<ul class="list-icon text-white mt-4">
-											<li class="mb-1"><p><i class="ri-check-fill"></i><span>There are many variations of passages of Lorem Ipsum available, in some form, by injected humour</span></p></li>
-											<li class="mb-1"><p><i class="ri-check-fill"></i><span>There are many variations of passages of Lorem Ipsum available, in some form, by injected humour</span></p></li>
+											<li class="mb-1"><p><i class="ri-check-fill"></i><span>@lang('heading.sign-up-sub-heading')</span></p></li>
+											<li class="mb-1"><p><i class="ri-check-fill"></i><span>@lang('heading.sign-up-inner-heading')</span></p></li>
 										</ul>
 										<div class="row gx-3 mt-7">
 											<div class="col-lg-6">
 												<div class="card card-shadow">
-													<img class="card-img-top" src="dist/img/juri-logo.png" alt="Card image cap" width="100">
+													<img class="card-img-top" src="{{asset('assets/dist/img/juri-logo.png')}}" alt="Card image cap" width="100">
 													<div class="card-body">
-														<h5 class="card-title text-uppercase">Help Centre</h5>
-														<p class="card-text">This is a wider card with supporting text.</p>
+														<h5 class="card-title text-uppercase">@lang('heading.help-centre')</h5>
+														<p class="card-text">@lang('heading.help-centre-paragraph')</p>
 													</div>
 												</div>
 											</div>
 											<div class="col-lg-6">
 												<div class="card card-shadow">
-													<img class="card-img-top" src="dist/img/juri-logo.png" alt="Card image cap">
+													<img class="card-img-top" src="{{asset('assets/dist/img/juri-logo.png')}}" alt="Card image cap">
 													<div class="card-body">
-														<h5 class="card-title text-uppercase">Research Centre</h5>
-														<p class="card-text">This is a wider card with supporting text.</p>
+														<h5 class="card-title text-uppercase">@lang('heading.research-centre')</h5>
+														<p class="card-text">@lang('heading.research-centre-paragraph')</p>
 													</div>
 												</div>
 											</div>
@@ -72,50 +72,69 @@ Contact: contact@hencework.com
 							<div class="auth-content flex-column pt-8 pb-md-8 pb-13">
 								<div class="text-center mb-7">
 									<a class="navbar-brand me-0" href="#">
-										<img class="brand-img d-inline-block" src="dist/img/juri-logo.png" alt="brand" width="150" height="48">
+										<img class="brand-img d-inline-block" src="{{asset('assets/dist/img/juri-logo.png')}}" alt="brand" width="150" height="48">
 									</a>
 								</div>
-								<form class="w-100">
+								<form class="w-100" method="POST" action="{{ route('register') }}">
+									@csrf
 									<div class="row">
 										<div class="col-xxl-5 col-xl-7 col-lg-10 mx-auto">
-											<h4 class="text-center mb-4">Sign Up to JurisLPM</h4>
-											<button class="btn btn-outline-dark btn-rounded btn-block mb-3"><span><span class="icon"><i class="fab fa-google"></i></span><span>Sign Up with Gmail</span></span></button>
-											<button class="btn btn-social btn-social-facebook btn-rounded btn-block"><span><span class="icon"><i class="fab fa-facebook"></i></span><span>Sign Up with Facebook</span></span></button>
+											<h4 class="text-center mb-4">@lang('heading.sign-up-right-heading')</h4>
+											<button class="btn btn-outline-dark btn-rounded btn-block mb-3"><span><span class="icon"><i class="fab fa-google"></i></span><span>@lang('heading.sign-up-gmail')</span></span></button>
+											<button class="btn btn-social btn-social-facebook btn-rounded btn-block"><span><span class="icon"><i class="fab fa-facebook"></i></span><span>@lang('heading.sign-up-fb')</span></span></button>
 											<div class="title-sm title-wth-divider divider-center my-4"><span>Or</span></div>
 											<div class="row gx-3">
 												<div class="form-group col-lg-6">
-													<label class="form-label">Name</label>
-													<input class="form-control" placeholder="Enter your name" value="" type="text">
+													<label class="form-label">@lang('heading.name')</label>
+													<input class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Enter your name" value="{{ old('name') }}" required autocomplete="name" autofocus type="text">
 												</div>
 												<!-- <div class="form-group col-lg-6">
 													<label class="form-label">Username</label>
 													<input class="form-control" placeholder="Enter username" value="" type="text">
 												</div> -->
 												<div class="form-group col-lg-6">
-													<label class="form-label">Email</label>
-													<input class="form-control" placeholder="Enter your email id" value="" type="text">
+													<label class="form-label">@lang('heading.email')</label>
+													<input id="email" type="email" placeholder="Enter your email id" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+													@error('email')
+														<span class="invalid-feedback" role="alert">
+															<strong>{{ $message }}</strong>
+														</span>
+													@enderror
 												</div>
 												<div class="form-group col-lg-6">
-													<label class="form-label">Password</label>
+													<label class="form-label">@lang('heading.password')</label>
 													<div class="input-group password-check">
 														<span class="input-affix-wrapper affix-wth-text">
-															<input class="form-control" placeholder="6+ characters" value="" type="password">
+															<input id="password" type="password" placeholder="6+ characters" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 															<a href="#" class="input-suffix text-primary text-uppercase fs-8 fw-medium">
-																<span>Show</span>
-																<span class="d-none">Hide</span>
+																<span>@lang('heading.show')</span>
+																<span class="d-none">@lang('heading.hide')</span>
 															</a>
+
+															@error('password')
+																<span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+																</span>
+															@enderror
 														</span>
 													</div>
 												</div>
 												<div class="form-group col-lg-6">
-													<label class="form-label">Confirm Password</label>
+													<label class="form-label">@lang('heading.confirm-password')</label>
 													<div class="input-group password-check">
 														<span class="input-affix-wrapper affix-wth-text">
-															<input class="form-control" placeholder="6+ characters" value="" type="password">
+															<input id="password-confirm" type="password" placeholder="6+ characters" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
 															<a href="#" class="input-suffix text-primary text-uppercase fs-8 fw-medium">
-																<span>Show</span>
-																<span class="d-none">Hide</span>
+																<span>@lang('heading.show')</span>
+																<span class="d-none">@lang('heading.hide')</span>
 															</a>
+
+															@error('password')
+																<span class="invalid-feedback" role="alert">
+																	<strong>{{ $message }}</strong>
+																</span>
+															@enderror
 														</span>
 													</div>
 												</div>
@@ -125,8 +144,11 @@ Contact: contact@hencework.com
 												<input type="checkbox" class="form-check-input" id="logged_in" checked>
 												<label class="form-check-label text-muted fs-8" for="logged_in">By creating an account you specify that you have read and agree with our <a href="#">Tearms of use</a> and <a href="#">Privacy policy</a>. We may keep you inform about latest updates through our default <a href="#">notification settings</a></label>
 											</div>
-											<a href="#" class="btn btn-primary btn-rounded btn-uppercase btn-block ">Create account</a>
-											<p class="p-xs mt-2 text-center">Already a member ? <a href="#"><u>Sign In</u></a></p>
+											{{-- <a href="#" class=" "></a> --}}
+											<button type="submit" class="btn btn-primary btn-rounded btn-uppercase btn-block">
+												@lang('heading.create-acc')
+											</button>
+											<p class="p-xs mt-2 text-center">@lang('heading.member')<a href="{{route('login')}}"><u>@lang('heading.sign-in')</u></a></p>
 										</div>
 									</div>
 								</form>
@@ -136,7 +158,7 @@ Contact: contact@hencework.com
 								<footer class="container-xxl footer">
 									<div class="row">
 										<div class="col-xl-8 text-center">
-											<p class="footer-text pb-0"><span class="copy-text">JurisLPM © 2022 All rights reserved.</span> <a href="#" class="" target="_blank">Privacy Policy</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">T&C</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">System Status</a></p>
+											<p class="footer-text pb-0"><span class="copy-text">@lang('heading.footer-text')</span> <a href="#" class="" target="_blank">@lang('heading.privacy-policy')</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">@lang('heading.t&c')</a><span class="footer-link-sep">|</span><a href="#" class="" target="_blank">@lang('heading.system-status')</a></p>
 										</div>
 									</div>
 								</footer>
