@@ -5,8 +5,198 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    	<!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <!-- Bootstrap Dropify CSS -->
+        <link href="vendors/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- select2 CSS -->
+        <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+    
+        <!-- CSS -->
+        <link href="dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
     
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="form-label">Empolyee ID</label>
+            <input class="form-control" type="text" value=""/>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="form-label">Empolyee Name</label>
+            <input class="form-control" type="text" value=""/>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="form-label">Empolyee Email</label>
+            <input class="form-control" type="email" value=""/>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="form-group">
+            <label class="form-label">Empolyee Password</label>
+            <input class="form-control" type="password" value=""/>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <label class="form-label">Slack Username</label>
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+    </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="form-label">Joining Date</label>
+                <input class="form-control join1" type="date" value=""/>
+            </div>
+        </div>
+    
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="form-label">Exit Date</label>
+                <input class="form-control" type="date" value=""/>
+            </div>
+        </div>
+    
+        <div class="col-md-2">
+            <div class="form-group">
+                <label class="form-label">Gender</label>
+                <input class="form-control" type="gender" placeholder="Male" value=""/>
+            </div>
+        </div>
+        </div>
+
+        <div class="row gx-3">
+            <div class="col-md-11 ">
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <label class="form-label">Address</label>
+                        <small class="text-muted">1200</small>
+                    </div>
+                    <textarea class="form-control" rows="5" placeholder="Write your address here"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        
+
+    <div class="col-md-11">
+        <div class="form-group">
+            <label class="form-label">Skills</label>
+            <input class="form-control" type="text" value=""/>
+        </div>
+    </div>
+
+    <div class="row">
+
+    <div class="col-lg-3">
+        <label class="form-label">Mobile</label>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">----</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">333</a></li>
+                <li><a class="dropdown-item" href="#">300</a></li>
+                <li><a class="dropdown-item" href="#">322</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Other</a></li>
+            </ul>
+            <input type="number" class="form-control" aria-label="Enter Mobile Number">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <label class="form-label">Hourly Rate (USD)</label>
+            <input class="form-control" type="text" value=""/>
+        </div>
+    </div>
+
+
+
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label class="form-label">Login</label>
+            <select class="form-select">
+                <option selected>Enable</option>
+                <option value="1">Disable</option>
+                
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+        <label class="form-label">Email Notifications</label>
+        <div class="form-check">
+            <div class="d-inline-block">
+                <input type="radio" id="enYes" name="emailRadio" class="form-check-input">
+                <label class="form-check-label" for="enYes">Enable</label>
+            </div>
+            <div class="d-inline-block mx-5">
+                <input type="radio" id="enNo" name="emailRadio" checked class="form-check-input">
+                <label class="form-check-label" for="enNo">Disable</label></div>
+        </div>
+    </div>
+    </div>    
+    </div>
+
+
+    <div class="col-md-2">
+        <div class="form-group">
+            <label class="form-label">Select Language</label>
+            <select class="form-select">
+                <option selected>English</option>
+                <option value="1">French</option>
+                <option value="2">italian</option>
+                <option value="3">Spanish</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row gx-3">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <div class="media align-items-center">
+                    <div class="media-head me-5">
+                        <div class="avatar avatar-xxl">
+                            <img src="dist/img/avatar3.jpg" alt="user" class="avatar-img">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div class="btn btn-soft-primary btn-file mb-1">
+                            <button type="button" class="btn btn-primary mt-1">Save Changes</button>
+
+                            <input type="file" class="upload">
+                        </div>
+                        <div class="form-text text-muted">
+                            For better preview recommended size is 450px x 450px. Max size 5mb.
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
