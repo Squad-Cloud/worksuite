@@ -5,6 +5,8 @@ use App\Http\Controllers\Source\UserAccessController;
 use App\Http\Controllers\Source\EmployeeController;
 use App\Http\Controllers\employee\Auth\LoginController;
 use App\Http\Controllers\employee\DashboardController;
+use App\Http\Controllers\Source\MatterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +50,7 @@ Route::get('all_employees', [EmployeeController::class, 'index'])->name('all_emp
 Route::get('add_employees', [EmployeeController::class, 'create'])->name('add_employee');
 Route::post('store_employees', [EmployeeController::class, 'store'])->name('store_employee');
 
+// Matter Routes
+Route::get('all_matter', [MatterController::class, 'index'])->name('all_matter');
+Route::get('add_matter', [MatterController::class, 'create'])->name('add_matter');
+Route::post('store_matter', [MatterController::class, 'store'])->name('store_matter');
