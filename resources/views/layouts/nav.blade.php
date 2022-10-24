@@ -399,6 +399,16 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                <span class="nav-link-text">Matter Management</span>
+                            </a>
+                            <ul id="matter" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_matter')}}"><span class="nav-link-text">View All Matter</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_matter')}}"><span class="nav-link-text">Add New Matter</span></a>
                                         </li>
                                     </ul>	
                                 </li>	

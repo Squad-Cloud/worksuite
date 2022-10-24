@@ -13,10 +13,10 @@
         <div class="hk-pg-body">
           <!-- Start -->
             <div class="row">
-            <h5 class="col-sm-8 mt-2">Employees</h5>
+            <h5 class="col-sm-8 mt-2">Matters</h5>
             <div class="col-sm-4">						
                 <div>
-                    <a href="{{route('add_employee')}}" class="btn btn-primary btn-sm btn btn-outline-primary">Add new employe+</a>
+                    <a href="{{route('add_employee')}}" class="btn btn-primary btn-sm btn btn-outline-primary">Add new matter+</a>
                     <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save"></i>    Export</button>
                 </div>
             </div>
@@ -47,27 +47,27 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Employee ID</th>
-                <th scope="col">Name</th>
+                <th scope="col">Matetr ID</th>
+                <th scope="col">Client</th>
                 <th scope="col">Email</th>
-                <th scope="col">User Role</th>
-                <th scope="col">Status</th>
+                <th scope="col">Date</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
-                @forelse ($employee as $key => $item)
+                @forelse ($matter as $key => $item)
                 <tr>
                     <th scope="row">{{$key+1}}</th>
                     <td>EMP-0{{$item->id}}</td>
-                    <td><img src="{{asset('uploads/'.$item->image)}}" height="30" class="rounded-circle">{{$item->emp_name}}</td>
-                    <td>{{$item->email}}</td>
-                    <td><button type="button" class="btn btn-primary btn-sm btn btn-outline-primary">Employee</button></td>
-                    <td><button type="button" class="btn btn-primary btn-sm btn btn-outline-primary">{{$item->login == 'Enable' ? 'Active' : 'Inactive'}}</button></td>
+                    <td>{{$item->client->name}}</td>
+                    <td>{{$item->client->email}}</td>
+                    <td>{{$item->open_date}}</td>
                     <td><i class="bi bi-share"></i></td>
                   </tr>
                 @empty
-                    <span>No Data Found</span>
+                <tr>
+                    <td>No Data Foundtd</td>
+                </tr>
                 @endforelse
               
             </tbody>

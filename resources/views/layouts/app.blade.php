@@ -51,6 +51,16 @@
     <!-- Tinymce JS -->
     <script src="{{asset('assets/vendors/tinymce/tinymce.min.js')}}"></script>
     <script src="{{asset('assets/dist/js/tinymce-data.js')}}"></script>
+    <script>
+        $(function() {
+          $('.singledate').daterangepicker({
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'),10)
+          });
+        });
+        </script>
     @stack('scripts')
 </body>
 </html>

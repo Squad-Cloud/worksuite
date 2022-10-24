@@ -14,8 +14,8 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        $employee = Employee::where('parent_id',Auth::user()->id)->get();
-        return view('employee.index');
+        $employee = Employee::with('department')->with('designation')->where('parent_id',Auth::user()->id)->get();
+        return view('employee.index',compact('employee'));
     }
     public function create()
     {
@@ -30,6 +30,22 @@ class EmployeeController extends Controller
             'emp_id' => 'required|numeric|max:25',
             'emp_email' => 'required|email|max:255',
             'emp_name' => 'required|max:25',
+            'emp_password' => 'required|numeric|max:25',
+            'emp_slack' => 'required|max:25',
+            'emp_join_date' => 'required|date|max:25',
+            'emp_exit' => 'required|date|max:25',
+            'emp_gender' => 'required|max:25',
+            'emp_address' => 'required|max:255',
+            'emp_skills' => 'required|max:50',
+            'designation' => 'required',
+            'department' => 'required',
+            'mobile' => 'required|numeric|max:25',
+            'hourly_rate' => 'required|numeric|max:25',
+            'is_login' => 'required',
+            'emp_notification' => 'required',
+            'language' => 'required',
+            'image' => 'required',
+
 
         ]);
 

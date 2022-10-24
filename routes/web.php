@@ -9,9 +9,7 @@ use App\Http\Controllers\Source\Tasks\TaskController;
 use App\Http\Controllers\Source\Events\EventController;
 use App\Http\Controllers\Source\Clients\ClientController;
 use App\Http\Controllers\Source\Activities\ActivityController;
-
-
-
+use App\Http\Controllers\Source\MatterController;
 
 
 /*
@@ -78,3 +76,7 @@ Route::get('all_client', [ClientController::class, 'index'])->name('all_client')
 // Activities Routes
 Route::get('add_activity', [ActivityController::class, 'create'])->name('add_activity');
 Route::get('view_activity', [ActivityController::class, 'index'])->name('view_activity');
+// Matter Routes
+Route::get('all_matter', [MatterController::class, 'index'])->name('all_matter');
+Route::get('add_matter', [MatterController::class, 'create'])->name('add_matter');
+Route::post('store_matter', [MatterController::class, 'store'])->name('store_matter');
