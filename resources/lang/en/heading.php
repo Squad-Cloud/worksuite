@@ -11,7 +11,7 @@ return [
     'new-to-jurislpm?' => 'New to JurisLPM?',
     'new-account' => 'Create new account',
     'feedback' => 'Send feedback to our help forum',
-    'footer-text' => 'JurisLPM Â© 2022 All rights reserved',
+    'footer-text' => 'JurisLPM © 2022 All rights reserved',
     'system-status' => 'System Status',
     'meeting' => 'Meet all new Pro JurisLPM 2.0',
     'take-tour' => 'TAKE TOUR',
@@ -20,6 +20,9 @@ return [
     'icons8' => 'Icons8',
     'privacy-policy' => 'Privacy Policy',
     't&c' => 'T&C',
+    
+
+
     'sign-up-heading' =>  'High quality JurisLPM template for your next web project.',
     'sign-up-sub-heading' => 'lorem ipsum',
     'sign-up-inner-heading' => 'lorem ipsum',
