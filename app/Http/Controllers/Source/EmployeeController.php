@@ -15,7 +15,7 @@ class EmployeeController extends Controller
     public function index()
     {
         $employee = Employee::where('parent_id',Auth::user()->id)->get();
-        return view('employee.index');
+        return view('employee.index',compact('employee'));
     }
     public function create()
     {

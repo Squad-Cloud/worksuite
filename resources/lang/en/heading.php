@@ -17,7 +17,7 @@ return [
     'take-tour' => 'TAKE TOUR',
     'sign-up-sub-heading' => 'There are many variations of passages of lorem ipsum avaiable.',
     'footer' => 'All illustration are powered by',
-    'icons8' => 'Icons8'
+    'icons8' => 'Icons8',
     'privacy-policy' => 'Privacy Policy',
     't&c' => 'T&C',
     
