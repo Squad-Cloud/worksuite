@@ -1,83 +1,56 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Client | JurisLPM</title>
+        <meta name="description" content="A modern CRM Dashboard Template with reusable and flexible components for your SaaS web applications by hencework. Based on Bootstrap."/>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <!-- Bootstrap Dropify CSS -->
+        <link href="{{asset('assets/vendors/dropify/dist/css/dropify.min.css')}}" rel="stylesheet" type="text/css"/>
+        
+        <!-- select2 CSS -->
+        <link href="{{asset('assets/vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
+    
+        <!-- CSS -->
+        <link href="{{asset('assets/dist/css/style.css')}}" rel="stylesheet" type="text/css">
+    </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+    <!-- Wrapper -->
+    <div class="hk-wrapper" data-layout="vertical" data-layout-style="default" data-menu="light" data-footer="simple">
+        
+        @include('layouts.navtop')
+        @include('layouts.nav')
+    <div id="hk_menu_backdrop" class="hk-menu-backdrop"></div>
+    </div>
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+     <!-- /Wrapper -->
+
+    <script src="{{asset('assets/vendors/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/dist/js/feather.min.js')}}"></script>
+    <script src="{{asset('assets/dist/js/dropdown-bootstrap-extended.js')}}"></script>
+    <script src="{{asset('assets/vendors/simplebar/dist/simplebar.min.js')}}"></script>
+    <script src="{{asset('assets/vendors/select2/dist/js/select2.full.min.js')}}"></script>
+    <script src="{{asset('assets/dist/js/select2-data.js')}}"></script>
+    <script src="{{asset('assets/vendors/dropify/dist/js/dropify.min.js')}}"></script>
+    <script src="{{asset('assets/dist/js/dropify-data.js')}}"></script>
+    <script src="{{asset('assets/dist/js/init.js')}}"></script>
+    <script src="{{asset('assets/dist/js/contact-data.js')}}"></script>
+    <script src="{{asset('assets/dist/js/chips-init.js')}}"></script>
+    <!-- Tinymce JS -->
+    <script src="{{asset('assets/vendors/tinymce/tinymce.min.js')}}"></script>
+    <script src="{{asset('assets/dist/js/tinymce-data.js')}}"></script>
+    @stack('scripts')
 </body>
 </html>
