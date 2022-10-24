@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Dropify CSS -->
+    <link href="vendors/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- select2 CSS -->
+    <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal">Open Popup</a>
+    <div class="modal" tabindex="-1" id="popupModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <p>Add Empolyee Info</p>
+              <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- <p>Modal body text goes here.</p> -->
+              <!-- <div class="container">
+                <div class="container-fluid p-3 bg-primary text-white">
+                    <p>Add Empolyee Info</p>
+                </div>
+             -->
+                <div class="title title-xs title-wth-divider text-primary text-uppercase my-4"><span>Company Detail</span></div>
+                <div class="row gx-3">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">Empolyee ID   <i class="bi bi-info-circle-fill"></i></label>
+                            <input class="form-control" type="text" value="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">Empolyee Name</label>
+                            <input class="form-control" type="text" value="" />
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <div class="row gx-3">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">Empolyee Email</label>
+                            <input class="form-control" type="email" value="" />
+                            <p>Empolyee will Login using this email</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label class="form-label">Empolyee Password</label>
+                            <input class="form-control" type="password" value="" />
+                            <p>Empolyee will Login using this Password</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="form-label">Designation</label>
+                        <select class="form-select">
+                            <option selected>..</option>
+                            <option value="1">..</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="form-label">Department</label>
+                        <select class="form-select">
+                            <option selected>..</option>
+                            <option value="1">..</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
+            
+            
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Joining Date</label>
+                        <input class="form-control join1" type="date" value=""/>
+                    </div>
+                </div>
+            
+                <div class="form-group col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select" type="gender" value=""/>
+                    <option >Male</option>
+                    <option value="1">Female</option>
+                    </select>
+                </div>
+                </div>
+                <button  type="button" class="btn btn-success mt-1">Save</button>
+                <!-- <i class="bi bi-check"></i> -->
+            </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+   
+      <script src="vendors/jquery/dist/jquery.min.js"></script>
+      <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
