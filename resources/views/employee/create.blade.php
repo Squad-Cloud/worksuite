@@ -65,12 +65,18 @@
                 <span class="input-group-text" id="basic-addon1">@</span>
                 <input type="text" name="emp_slack" class="form-control" placeholder="Username" aria-label="Username"
                     aria-describedby="basic-addon1">
+                    @error('emp_slack')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label class="form-label">Joining Date</label>
                 <input class="form-control join1" name="emp_join_date" type="date" value="" />
+                @error('emp_join_date')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
 
@@ -78,6 +84,9 @@
             <div class="form-group">
                 <label class="form-label">Exit Date</label>
                 <input class="form-control" type="date" name="emp_exit" value="" />
+                @error('emp_exit')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
 
@@ -85,6 +94,9 @@
             <div class="form-group">
                 <label class="form-label">Gender</label>
                 <input class="form-control" type="gender" name="emp_gender" placeholder="Male" value="" />
+                @error('emp_gender')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
     </div>
@@ -97,6 +109,9 @@
                     <small class="text-muted">1200</small>
                 </div>
                 <textarea class="form-control" name="emp_address" rows="5" placeholder="Write your address here"></textarea>
+                @error('emp_address')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
     </div>
@@ -107,6 +122,9 @@
         <div class="form-group">
             <label class="form-label">Skills</label>
             <input class="form-control" type="text" name="emp_skills" value="" />
+            @error('emp_skills')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
         </div>
     </div>
     <div class="row">
@@ -121,6 +139,9 @@
                         <span>No Data</span>
                     @endforelse
                 </select>
+                @error('designation')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
         <div class="col-lg-5">
@@ -134,6 +155,9 @@
                         <span>No Data</span>
                     @endforelse
                 </select>
+                @error('department')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
     </div>
@@ -157,12 +181,18 @@
                     <option value="300">300</option>
                 </select>
                 <input type="number" name="mobile" class="form-control" aria-label="Enter Mobile Number">
+                @error('mobile')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label class="form-label">Hourly Rate (USD)</label>
                 <input class="form-control" type="text" name="hourly_rate" value="" />
+                @error('hourly_rate')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
         <div class="col-lg-3">
@@ -172,6 +202,9 @@
                     <option selected>Enable</option>
                     <option value="1">Disable</option>
                 </select>
+                @error('is_login')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
             </div>
         </div>
         <div class="col-md-3">
@@ -181,10 +214,14 @@
                     <div class="d-inline-block">
                         <input type="radio" id="notiYes" name="emp_notification" class="form-check-input">
                         <label class="form-check-label" for="enYes">Enable</label>
+                        
                     </div>
                     <div class="d-inline-block mx-5">
                         <input type="radio" d="notiNo" name="emp_notification" checked class="form-check-input">
                         <label class="form-check-label" for="enNo">Disable</label>
+                        @error('emp_notification')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
                     </div>
                 </div>
             </div>
@@ -201,6 +238,9 @@
                 <option value="2">italian</option>
                 <option value="3">Spanish</option>
             </select>
+            @error('language')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
         </div>
     </div>
 
@@ -217,6 +257,9 @@
                         <div class="btn btn-soft-primary btn-file mb-1">
                             <button type="button" class="btn btn-primary mt-1">Select Image</button>
                             <input type="file" class="upload" name="image">
+                            @error('image')
+                <div class="alert alert-danger">{{ $message }}</div>
+                 @enderror
                         </div>
                         <div class="form-text text-muted">
                             For better preview recommended size is 450px x 450px. Max size 5mb.
