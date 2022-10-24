@@ -16,7 +16,7 @@
             <h5 class="col-sm-8 mt-2">Matters</h5>
             <div class="col-sm-4">						
                 <div>
-                    <a href="{{route('add_employee')}}" class="btn btn-primary btn-sm btn btn-outline-primary">Add new matter+</a>
+                    <a href="{{route('add_matter')}}" class="btn btn-primary btn-sm btn btn-outline-primary">Add new matter+</a>
                     <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save"></i>    Export</button>
                 </div>
             </div>
