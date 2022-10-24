@@ -15,7 +15,7 @@ return [
     'system-status' => 'System Status',
     'meeting' => 'Meet all new Pro JurisLPM 2.0',
     'take-tour' => 'TAKE TOUR',
-   * 'sign-up-sub-heading' => 'There are many variations of passages of lorem ipsum avaiable.',
+    'sign-up-sub-heading' => 'There are many variations of passages of lorem ipsum avaiable.',
     'footer' => 'All illustration are powered by',
     'icons8' => 'Icons8'
     'privacy-policy' => 'Privacy Policy',
@@ -27,13 +27,16 @@ return [
     'sign-up-sub-heading' => 'lorem ipsum',
     'sign-up-inner-heading' => 'lorem ipsum',
     'help-centre' => 'HELP CENTRE',
+    'help-centre-paragraph' => 'This is a wider card with supporting text.',
     'research-centre' => 'RESEARCH CENTRE',
+    'research-centre-paragraph' => 'This is a wider card with supporting text.',
     'sign-up-right-heading' => 'Sign Up to JurisLPM',
     'sign-up-gmail' => 'Sign Up With Gmail',
     'sign-up-fb' => 'Sign Up With Facebook',
     'name' => 'Name',
     'confirm-password' => 'Confirm Password',
     'show' => 'SHOW',
+    'hide' => 'HIDE',
     'sign-up-t&c' => 'By creating an account you specify that you have read and agree with our
     Terms of use and Privacy policy. We may keep you inform about latest
     updates through our default notification settings',
@@ -43,4 +46,4 @@ return [
     'name-placeholder' => 'Enter your name',
     'email-placeholder' => 'Enter your email id',
     'placeholder-characters' => 'characters'
-    ];
+];
