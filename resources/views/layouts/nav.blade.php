@@ -54,9 +54,10 @@
                     <div class="nav-header">
                         <span>Apps</span>
                     </div>
-                    <ul class="navbar-nav flex-column">
+                     <!-- Matters--> 
+                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#dash_chat">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Matters">
                                 <span class="nav-icon-wrap">
                                     <span class="svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -68,9 +69,9 @@
                                         </svg>
                                     </span>
                                 </span>
-                                <span class="nav-link-text">Employee Management</span>
+                                <span class="nav-link-text">Matters</span>
                             </a>
-                            <ul id="dash_chat" class="nav flex-column collapse  nav-children">
+                            <ul id="Matters" class="nav flex-column collapse  nav-children">
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -84,6 +85,359 @@
                             </ul>	
                         </li>
                     </ul>
+                    <!---End--->
+                     <!-- Tasks--> 
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Tasks">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Tasks</span>
+                            </a>
+                            <ul id="Tasks" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_tasks')}}"><span class="nav-link-text">Tasks List</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_tasks')}}"><span class="nav-link-text">Add Task</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                     <!-- Calender--> 
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Calender">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Calender</span>
+                            </a>
+                            <ul id="Calender" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('view_calender')}}"><span class="nav-link-text">View Calender</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_event')}}"><span class="nav-link-text">Add Event</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                     <!-- Clients--> 
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Clients">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Clients</span>
+                            </a>
+                            <ul id="Clients" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_client')}}"><span class="nav-link-text">View Clients</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_client')}}"><span class="nav-link-text">Add Clients</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                     <!-- Activities--> 
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Activities">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Activities</span>
+                            </a>
+                            <ul id="Activities" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('view_activity')}}"><span class="nav-link-text">View Activities</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_activity')}}"><span class="nav-link-text">Add Activity</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                     <!-- Billing--> 
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Billing">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Billing</span>
+                            </a>
+                            <ul id="Billing" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                     <!-- Accounts--> 
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Accounts">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Accounts</span>
+                            </a>
+                            <ul id="Accounts" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                      <!-- Documents--> 
+                      <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Documents">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Documents</span>
+                            </a>
+                            <ul id="Documents" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                      <!-- Communications--> 
+                      <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Communications">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Communications</span>
+                            </a>
+                            <ul id="Communications" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                      <!-- Reports--> 
+                      <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Reports">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Reports</span>
+                            </a>
+                            <ul id="Reports" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
+                    <!---Employe Management--->
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Employe_Management">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Employee Management</span>
+                            </a>
+                            <ul id="Employe_Management" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                   <!---End--->
+                      <!-- Settings--> 
+                      <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Settings">
+                                <span class="nav-icon-wrap">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4" />
+                                            <line x1="12" y1="11" x2="12" y2="11.01" />
+                                            <line x1="8" y1="11" x2="8" y2="11.01" />
+                                            <line x1="16" y1="11" x2="16" y2="11.01" />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <span class="nav-link-text">Settings</span>
+                            </a>
+                            <ul id="Settings" class="nav flex-column collapse  nav-children">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                        </li>
+                                    </ul>	
+                                </li>	
+                            </ul>	
+                        </li>
+                    </ul>
+                    <!---End--->
                 </div>
                 <div class="menu-gap"></div>
             </div>
