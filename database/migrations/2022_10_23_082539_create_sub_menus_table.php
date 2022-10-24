@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDesignationsTable extends Migration
+class CreateSubMenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateDesignationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('designations', function (Blueprint $table) {
+        Schema::create('sub_menus', function (Blueprint $table) {
             $table->id();
-            $table->string('name',10)->unique();
-            $table->integer('active')->default(1);
+            $table->string('submenu',25)->unique();
+            $table->bigInteger('menu_id')->unsigned();
+            $table->foreign('menu_id')->references('id')->on('menus');
+            $table->string('route_name',50);
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateDesignationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('designations');
+        Schema::dropIfExists('sub_menus');
     }
 }
