@@ -5,6 +5,10 @@ use App\Http\Controllers\Source\UserAccessController;
 use App\Http\Controllers\Source\EmployeeController;
 use App\Http\Controllers\employee\Auth\LoginController;
 use App\Http\Controllers\employee\DashboardController;
+use App\Http\Controllers\Source\Tasks\TaskController;
+use App\Http\Controllers\Source\Events\EventController;
+use App\Http\Controllers\Source\Clients\ClientController;
+use App\Http\Controllers\Source\Activities\ActivityController;
 use App\Http\Controllers\Source\MatterController;
 
 
@@ -50,6 +54,28 @@ Route::get('all_employees', [EmployeeController::class, 'index'])->name('all_emp
 Route::get('add_employees', [EmployeeController::class, 'create'])->name('add_employee');
 Route::post('store_employees', [EmployeeController::class, 'store'])->name('store_employee');
 
+
+// Tasks Routes
+Route::get('all_tasks', [TaskController::class, 'index'])->name('all_tasks');
+Route::get('add_tasks', [TaskController::class, 'create'])->name('add_tasks');
+
+
+// Calender Routes
+Route::get('view_calender', [EventController::class, 'index'])->name('view_calender');
+
+
+// Events Routes
+Route::get('add_event', [EventController::class, 'create'])->name('add_event');
+
+
+// Clients Routes
+Route::get('add_client', [ClientController::class, 'create'])->name('add_client');
+Route::get('all_client', [ClientController::class, 'index'])->name('all_client');
+
+
+// Activities Routes
+Route::get('add_activity', [ActivityController::class, 'create'])->name('add_activity');
+Route::get('view_activity', [ActivityController::class, 'index'])->name('view_activity');
 // Matter Routes
 Route::get('all_matter', [MatterController::class, 'index'])->name('all_matter');
 Route::get('add_matter', [MatterController::class, 'create'])->name('add_matter');
