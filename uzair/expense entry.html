@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Client | JurisLPM</title>
+    <meta name="description"
+        content="A modern CRM Dashboard Template with reusable and flexible components for your SaaS web applications by hencework. Based on Bootstrap." />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Dropify CSS -->
+    <link href="vendors/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- select2 CSS -->
+    <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="hk-wrapper" data-layout="vertical" data-layout-style="default" data-menu="light" data-footer="simple">
+        <div class="hk-pg-wrapper">
+            <div class="container-xxl">
+                <!-- Page Header -->
+                <div class="hk-pg-header pt-7 pb-4">
+                    <h1 class="pg-title"></h1>
+                    <p> </p>
+                </div>
+                <!-- /Page Header -->
+
+                <!-- Page Body -->
+                <div class="hk-pg-body">
+                    <!-- Start -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#popupModal">Open Popup</a>
+                    <div class="modal" tabindex="-1" id="popupModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header bg-light text-black">
+                                    <h5 class="modal-title">New Expense Entry</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="col-lg-12">
+                                        <div class="form-check">
+                                            <h6>Expense Type</h6>
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <b>Distursement:</b> expense requiring payment to avendor on behalf of a
+                                                client(e.g court fees)
+                                            </label>
+                                        </div>
+
+
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <b>Expense Recoveries:</b> expense not linked directly to a vendor
+                                                payment (e.g photocopies, postage)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-label">Expense Category</label>
+                                                <select class="form-select">
+                                                    <option selected>Select an expense category</option>
+    
+                                                </select>
+                                            </div>
+                                        </div>
+    
+    
+    
+    
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Amount</label>
+                                                <div class="input-group flex-nowrap">
+                                                    <span class="input-group-text" id="addon-wrapping">Rs</span>
+                                                    <input type="text" class="form-control" placeholder="00.1"
+                                                        aria-label="Username" aria-describedby="addon-wrapping">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Reference</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Enter cheque reference number" aria-label="Username"
+                                                    aria-describedby="addon-wrapping">
+                                                </select>
+                                            </div>
+                                        </div>
+    
+    
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Vender</label>
+                                                <select class="form-select">
+                                                    <option>Specify a vender</option>
+    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Matter</label>
+                                                <p>Hello World</p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <div class="form-label-group">
+                                                        <label class="form-label">Address</label>
+                                                        <small class="text-muted">1200</small>
+                                                    </div>
+                                                    <textarea class="form-control" rows="5"
+                                                        placeholder="Write your address here"></textarea>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-6">
+                                                <div class="form-group ">
+                                                    <label class="form-label">Date</label>
+                                                    <input class="form-control join1" type="date" value="" required />
+                                                </div>
+    
+    
+    
+    
+                                                <div class="form-group mb-3">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Firm</label>
+                                                        <select class="form-select">
+                                                            <option>Zubair Ayub</option>
+            
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+    
+    
+    
+                                    </div>
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    
+                                    <div class="p-3 mb-2 bg-light text-dark">
+                                        <button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save Entry</button>
+                                        <button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and create another</button>
+                                        <button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and duplicate</button>
+                                        <button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm" data-bs-dismiss="modal">Cancel</button>
+
+                                    </div>
+                                    </div>
+
+
+
+
+
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- start ends -->
+        </div>
+        <!-- /Page Body -->
+    </div>
+
+    <!-- Page Footer -->
+    <div class="hk-footer">
+        <footer class="container-xxl footer">
+            <div class="row">
+                <div class="col-xl-8">
+                    <p class="footer-text"><span class="copy-text">JurisLPM © 2022 All rights reserved.</span> <a
+                            href="#" class="" target="_blank">Privacy Policy</a><span class="footer-link-sep">|</span><a
+                            href="#" class="" target="_blank">T&C</a><span class="footer-link-sep">|</span><a href="#"
+                            class="" target="_blank">System Status</a></p>
+                </div>
+                <div class="col-xl-4">
+                    <a href="#" class="footer-extr-link link-default"><span class="feather-icon"><i
+                                data-feather="external-link"></i></span><u>Send feedback to our help forum</u></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    </div>
+    <!-- / Page Footer -->
+
+    </div>
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <script src="dist/js/dropdown-bootstrap-extended.js"></script>
+    <script src="vendors/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+    <script src="dist/js/select2-data.js"></script>
+    <script src="vendors/dropify/dist/js/dropify.min.js"></script>
+    <script src="dist/js/dropify-data.js"></script>
+    <script src="dist/js/init.js"></script>
+    <script src="dist/js/contact-data.js"></script>
+    <script src="dist/js/chips-init.js"></script>
+    <!-- Tinymce JS -->
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script src="dist/js/tinymce-data.js"></script>
+</body>
+
+</html>
