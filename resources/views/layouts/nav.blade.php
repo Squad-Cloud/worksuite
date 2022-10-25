@@ -235,10 +235,10 @@
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                            <a class="nav-link" href="{{route('all_bill')}}"><span class="nav-link-text">Billing list</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                            <a class="nav-link" href="{{route('add_bill')}}"><span class="nav-link-text">Add New Bill</span></a>
                                         </li>
                                     </ul>	
                                 </li>	
@@ -267,10 +267,10 @@
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                            <a class="nav-link" href="{{route('all_account')}}"><span class="nav-link-text">View Accounts</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                            <a class="nav-link" href="{{route('add_account')}}"><span class="nav-link-text">Add New Account</span></a>
                                         </li>
                                     </ul>	
                                 </li>	
@@ -299,10 +299,13 @@
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                            <a class="nav-link" href="{{route('all_document')}}"><span class="nav-link-text">View All Documents</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                            <a class="nav-link" href="{{route('add_document')}}"><span class="nav-link-text">Upload Document</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('add_note')}}"><span class="nav-link-text">Add Notes</span></a>
                                         </li>
                                     </ul>	
                                 </li>	
@@ -331,10 +334,10 @@
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">Chats</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">New Chat</span></a>
                                         </li>
                                     </ul>	
                                 </li>	
@@ -363,10 +366,22 @@
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('all_employee')}}"><span class="nav-link-text">View All Employee</span></a>
+                                            <a class="nav-link" href="{{route('task_report')}}"><span class="nav-link-text">Task Report</span></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
+                                            <a class="nav-link" href="{{route('time_log_report')}}"><span class="nav-link-text">Time Log Report</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('finance_report')}}"><span class="nav-link-text">Finance Report</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('income_expense_report')}}"><span class="nav-link-text">Income Vs Expense Report</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('Leave_report')}}"><span class="nav-link-text">Leave Report</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{route('Attendance_report')}}"><span class="nav-link-text">Attendance Report</span></a>
                                         </li>
                                     </ul>	
                                 </li>	
