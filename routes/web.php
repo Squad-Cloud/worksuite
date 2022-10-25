@@ -10,6 +10,14 @@ use App\Http\Controllers\Source\Events\EventController;
 use App\Http\Controllers\Source\Clients\ClientController;
 use App\Http\Controllers\Source\Activities\ActivityController;
 use App\Http\Controllers\Source\MatterController;
+use App\Http\Controllers\Source\Billing\BillController;
+use App\Http\Controllers\Source\Accounts\AccountController;
+use App\Http\Controllers\Source\Documents\DocumentController;
+use App\Http\Controllers\Source\Reports\ReportController;
+
+
+
+
 
 
 /*
@@ -76,7 +84,31 @@ Route::get('all_client', [ClientController::class, 'index'])->name('all_client')
 // Activities Routes
 Route::get('add_activity', [ActivityController::class, 'create'])->name('add_activity');
 Route::get('view_activity', [ActivityController::class, 'index'])->name('view_activity');
+
+
 // Matter Routes
 Route::get('all_matter', [MatterController::class, 'index'])->name('all_matter');
 Route::get('add_matter', [MatterController::class, 'create'])->name('add_matter');
 Route::post('store_matter', [MatterController::class, 'store'])->name('store_matter');
+
+
+// Billing Routes
+Route::get('add_bill', [BillController::class, 'create'])->name('add_bill');
+Route::get('all_bill', [BillController::class, 'index'])->name('all_bill');
+
+// Accounts Routes
+Route::get('add_account', [AccountController::class, 'create'])->name('add_account');
+Route::get('all_account', [AccountController::class, 'index'])->name('all_account');
+
+// Documents Routes
+Route::get('add_document', [DocumentController::class, 'create'])->name('add_document');
+Route::get('add_note', [DocumentController::class, 'create'])->name('add_note');
+Route::get('all_document', [DocumentController::class, 'index'])->name('all_document');
+
+// Reports Routes
+Route::get('task_report', [ReportController::class, 'create'])->name('task_report');
+Route::get('time_log_report', [ReportController::class, 'create'])->name('time_log_report');
+Route::get('finance_report', [ReportController::class, 'index'])->name('finance_report');
+Route::get('income_expense_report', [ReportController::class, 'index'])->name('income_expense_report');
+Route::get('Leave_report', [ReportController::class, 'index'])->name('Leave_report');
+Route::get('Attendance_report', [ReportController::class, 'index'])->name('Attendance_report');
