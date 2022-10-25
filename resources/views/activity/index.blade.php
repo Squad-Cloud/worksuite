@@ -38,7 +38,7 @@
 		<td>@mdo</td>
 		<td>Jacob</td>
 		<td>
-            <select class="form-select" type=""  value=""/>
+            <select class="form-select" type=""  value="">
             <option selected>To do</option>
             <option value="1">In house</option>
             </select>

@@ -94,6 +94,9 @@ Route::post('store_matter', [MatterController::class, 'store'])->name('store_mat
 Route::get('edit_matter/{id}', [MatterController::class, 'edit'])->name('edit_matter');
 Route::post('update_matter/{id}', [MatterController::class, 'update'])->name('update_matter');
 Route::post('delete_matter/{id}', [MatterController::class, 'delete'])->name('delete_matter');
+Route::post('time_entry', [MatterController::class, 'time_entry'])->name('time_entry');
+Route::post('exp_entry', [MatterController::class, 'exp_entry'])->name('exp_entry');
+Route::post('activity', [MatterController::class, 'activity'])->name('activity');
 
 
 // Billing Routes
@@ -116,3 +119,6 @@ Route::get('finance_report', [ReportController::class, 'index'])->name('finance_
 Route::get('income_expense_report', [ReportController::class, 'index'])->name('income_expense_report');
 Route::get('Leave_report', [ReportController::class, 'index'])->name('Leave_report');
 Route::get('Attendance_report', [ReportController::class, 'index'])->name('Attendance_report');
+
+
+
