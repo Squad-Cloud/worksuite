@@ -191,17 +191,17 @@
 											<div class="card-body">
 												<div class="form-group">
 													<label class="form-label">Matter description</label>
-													<input class="form-control" type="text" value="Hello World"
+													<input class="form-control" type="text" value="{{$matter->description}}"
 														readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Responsible Solicitor</label>
-													<input class="form-control" type="text" value=" Client One"
+													<input class="form-control" type="text" value="{{$matter->client->name}}"
 														readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Originating Solicitor</label>
-													<input class="form-control" type="text" value="Client One"
+													<input class="form-control" type="text" value="{{$matter->client->name}}"
 														readonly />
 												</div>
 												<div class="form-group">
@@ -210,43 +210,43 @@
 												</div>
 												<div class="form-group">
 													<label class="form-label">Client Reference Number</label>
-													<input class="form-control" type="text" value="23423" readonly />
+													<input class="form-control" type="text" value="{{$matter->id}}-{{$matter->client->name}}" readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Location</label>
-													<input class="form-control" type="text" value="Karachi" readonly />
+													<input class="form-control" type="text" value="{{$matter->location}}" readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Status</label>
-													<select name="" id="" class="form-select">
-														<option value="1">Open</option>
-														<option value="2">Closed</option>
+													<select name="" id="" class="form-select" >
+														<option>{{$matter->status == 1 ? 'Open' : 'Close'}}</option>
+														{{-- <option value="2">Closed</option> --}}
 													</select>
 												</div>
 												<div class="form-group">
 													<label class="form-label">Open date</label>
-													<input class="form-control" type="text" value="10/21/2022"
+													<input class="form-control" type="text" value="{{$matter->open_date}}"
 														readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Pending date</label>
-													<input class="form-control" type="text" value="10/21/2022"
+													<input class="form-control" type="text" value="{{$matter->pending_date}}"
 														readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Closed date</label>
-													<input class="form-control" type="text" value="10/21/2022"
+													<input class="form-control" type="text" value="{{$matter->close_date}}"
 														readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Limitation date</label>
-													<input class="form-control" type="text" value="10/21/2022"
+													<input class="form-control" type="text" value="{{$matter->limit_date}}"
 														readonly />
 												</div>
 												<div class="form-group">
 													<label class="form-label">Billable:</label>
 													<span> Yes, <span class="badge badge-soft-primary">
-															hourly</span></span>
+                                                        {{$matter->billing->name}}</span></span>
 												</div>
 											</div>
 										</div>
