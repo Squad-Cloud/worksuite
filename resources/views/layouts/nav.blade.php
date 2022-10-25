@@ -392,7 +392,7 @@
                     <!---Employe Management--->
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#Employe_Management">
+                            <a class="nav-link" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#employe">
                                 <span class="nav-icon-wrap">
                                     <span class="svg-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-dots" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -404,9 +404,9 @@
                                         </svg>
                                     </span>
                                 </span>
-                                <span class="nav-link-text">Employee Management</span>
+                                <span class="nav-link-text">Employe</span>
                             </a>
-                            <ul id="Employe_Management" class="nav flex-column collapse  nav-children">
+                            <ul id="employe" class="nav flex-column collapse  nav-children">
                                 <li class="nav-item">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -414,22 +414,13 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('add_employee')}}"><span class="nav-link-text">Add New Employee</span></a>
-                                <span class="nav-link-text">Matter Management</span>
-                            </a>
-                            <ul id="matter" class="nav flex-column collapse  nav-children">
-                                <li class="nav-item">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{route('all_matter')}}"><span class="nav-link-text">View All Matter</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_matter')}}"><span class="nav-link-text">Add New Matter</span></a>
                                         </li>
                                     </ul>	
                                 </li>	
                             </ul>	
                         </li>
                     </ul>
+                     
                    <!---End--->
                       <!-- Settings--> 
                       <ul class="navbar-nav flex-column">
