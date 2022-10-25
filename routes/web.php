@@ -76,7 +76,12 @@ Route::get('all_client', [ClientController::class, 'index'])->name('all_client')
 // Activities Routes
 Route::get('add_activity', [ActivityController::class, 'create'])->name('add_activity');
 Route::get('view_activity', [ActivityController::class, 'index'])->name('view_activity');
+
 // Matter Routes
 Route::get('all_matter', [MatterController::class, 'index'])->name('all_matter');
+Route::get('dashboard_matter/{id}', [MatterController::class, 'matterDshboard'])->name('dashboard_matter');
 Route::get('add_matter', [MatterController::class, 'create'])->name('add_matter');
 Route::post('store_matter', [MatterController::class, 'store'])->name('store_matter');
+Route::get('edit_matter/{id}', [MatterController::class, 'edit'])->name('edit_matter');
+Route::post('update_matter/{id}', [MatterController::class, 'update'])->name('update_matter');
+Route::post('delete_matter/{id}', [MatterController::class, 'delete'])->name('delete_matter');

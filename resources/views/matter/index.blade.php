@@ -17,7 +17,7 @@
             <div class="col-sm-4">						
                 <div>
                     <a href="{{route('add_matter')}}" class="btn btn-primary btn-sm btn btn-outline-primary">Add new matter+</a>
-                    <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save"></i>    Export</button>
+                    <button type="button" class="btn btn-primary btn-sm"><i class="bi bi-save"></i>Export</button>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Matetr ID</th>
+                <th scope="col">Matter</th>
                 <th scope="col">Client</th>
                 <th scope="col">Email</th>
                 <th scope="col">Date</th>
@@ -58,11 +58,15 @@
                 @forelse ($matter as $key => $item)
                 <tr>
                     <th scope="row">{{$key+1}}</th>
-                    <td>EMP-0{{$item->id}}</td>
+                    <td><a href="{{route('dashboard_matter',$item->id)}}">{{$item->id}}-{{$item->client->name}}</a></td>
                     <td>{{$item->client->name}}</td>
                     <td>{{$item->client->email}}</td>
                     <td>{{$item->open_date}}</td>
-                    <td><i class="bi bi-share"></i></td>
+                    <td>
+                      <a href="#"><i class="bi bi-eye text-success"></i> </a>
+                      <a href="{{route('edit_matter',$item->id)}}"><i class="bi bi-pencil text-primary"></i> </a>
+                      <a onclick="deleteConfirm({{$item->id}})"><i class="bi bi-trash text-danger"></i> </a>
+                    </td>
                   </tr>
                 @empty
                 <tr>
@@ -78,3 +82,24 @@
     </div>
     </div>
 @endsection
+@push('scripts')
+    <script>
+      function deleteConfirm(id){
+        let text = "Do you want to Delete.";
+        if (confirm(text) == true) {
+          $.ajax({
+          url: "{{route('delete_matter',"+id+")}}",
+          data: {"_token": "{{ csrf_token() }}",
+                  id: id
+                },
+          type: 'post',
+          success: function(res){
+            location.reload();
+          }
+        })
+        } else {
+        }
+        
+      }
+    </script>
+@endpush
