@@ -470,8 +470,107 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane" id="activities">
-								<p>Activities</p>
+							<div class="tab-pane fade show active" id="activities">
+								<div class="card card-border mb-0 h-100">
+									<div class="card-header card-header-action">
+										<h6>Activities</h6>
+										<div>
+											<a class="btn btn-soft-primary" data-bs-toggle="modal"
+												data-bs-target="#addActivity" href="#">
+												<span class="nav-link-text"><span class="icon"><span
+															class="feather-icon"><i
+																data-feather="plus"></i></span></span> New Time
+													Entry</span>
+											</a>
+											<a class="btn btn-soft-primary" data-bs-toggle="modal"
+												data-bs-target="#addExpense" href="#">
+												<span class="nav-link-text"><span class="icon"><span
+															class="feather-icon"><i
+																data-feather="plus"></i></span></span> New
+													Expense</span>
+											</a>
+										</div>
+									</div>
+									<div class="card-body">
+										<!-- <div data-simplebar class="nicescroll-bar"> -->
+										<div class="contact-list-view">
+											<table id="datable_custom" class="table nowrap w-100 mb-5">
+												<thead>
+													<tr>
+														<th><span class="form-check mb-0">
+																<input type="checkbox"
+																	class="form-check-input check-select-all"
+																	id="customCheck1">
+																<label class="form-check-label"
+																	for="customCheck1"></label>
+															</span></th>
+														<th>Type</th>
+														<th>Qty</th>
+														<th>Description</th>
+														<th>Rate (Rs)</th>
+														<th>Non-billable (Rs)</th>
+														<th>Billable</th>
+														<th>Date</th>
+														<th>User</th>
+														<th>Invoice Status</th>
+														<th>Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td>Type</td>
+														<td>13 Jan, 2020</td>
+														<td>0.01h</td>
+														<td><span class="badge badge-light">draft</span></td>
+														<td>-</td>
+														<td>$ 2,300</td>
+														<td>11/19/2022</td>
+														<td>Client One</td>
+														<td><span class="badge badge-light">Unbilled</span></td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="btn-group selectable-split-dropdown">
+																	<button type="button"
+																		class="btn btn-outline-light btn-dyn-text w-100p">Edit</button>
+																	<button type="button"
+																		class="btn btn-outline-light dropdown-toggle dropdown-toggle-split me-3"
+																		data-bs-toggle="dropdown" aria-haspopup="true"
+																		aria-expanded="false">
+																		<span class="sr-only">Toggle Dropdown</span>
+																	</button>
+																	<div class="dropdown-menu dropdown-menu-end">
+																		<a class="dropdown-item" href="#">Duplicate</a>
+																		<a class="dropdown-item" href="#">Delete</a>
+
+																	</div>
+																</div>
+																<div class="d-flex">
+
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="" data-bs-original-title="Edit"
+																		href="contact-details.html"><span
+																			class="btn-icon-wrap"><span
+																				class="feather-icon"><i
+																					data-feather="edit"></i></span></span></a>
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover del-button"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="" data-bs-original-title="Delete"
+																		href="#"><span class="btn-icon-wrap"><span
+																				class="feather-icon"><i
+																					data-feather="trash-2"></i></span></span></a>
+																</div>
+															</div>
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+										<!-- </div> -->
+									</div>
+								</div>
 							</div>
 							<div class="tab-pane" id="calendar">
 								<p>calender</p>
@@ -531,7 +630,223 @@
 			<!-- /Main Content -->
 		</div>
 		<!-- /Wrapper -->
+		
+<!-- Add Expense Modal -->
+<div class="modal" tabindex="-1" id="addExpense">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header bg-light text-black">
+				<h5 class="modal-title">New Expense Entry</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="col-lg-12">
+					<div class="form-check">
+						<h6>Expense Type</h6>
+						<input class="form-check-input" type="radio" name="flexRadioDefault"
+							id="flexRadioDefault1" checked>
+						<label class="form-check-label" for="flexRadioDefault1">
+							<b>Disbursement:</b> expense requiring payment to avendor on behalf of a
+							client(e.g court fees)
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault"
+							id="flexRadioDefault2">
+						<label class="form-check-label" for="flexRadioDefault2">
+							<b>Expense Recoveries:</b> expense not linked directly to a vendor
+							payment (e.g photocopies, postage)
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label class="form-label">Expense Category</label>
+							<select class="form-select">
+								<option selected>Select an expense category</option>
 
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="form-label">Amount</label>
+							<div class="input-group flex-nowrap">
+								<span class="input-group-text" id="addon-wrapping">Rs</span>
+								<input type="text" class="form-control" placeholder="00.1" aria-label="Username"
+									aria-describedby="addon-wrapping">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="form-label">Reference</label>
+							<input type="text" class="form-control" placeholder="Enter cheque reference number"
+								aria-label="Username" aria-describedby="addon-wrapping">
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="form-label">Vender</label>
+							<select class="form-select">
+								<option>Specify a vender</option>
+
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="form-label">Matter</label>
+							<p>Hello World</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="form-label-group">
+									<label class="form-label">Address</label>
+									<small class="text-muted">1200</small>
+								</div>
+								<textarea class="form-control" rows="5"
+									placeholder="Write your address here"></textarea>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group ">
+								<label class="form-label">Date</label>
+								<input class="form-control join1" type="date" value="" required />
+							</div>
+							<div class="form-group mb-3">
+								<div class="form-group">
+									<label class="form-label">Firm</label>
+									<select class="form-select">
+										<option>Zubair Ayub</option>
+
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="p-3 mb-2 bg-light text-dark">
+					<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save
+						Entry</button>
+					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and
+						create another</button>
+					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and
+						duplicate</button>
+					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm"
+						data-bs-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Add Expense Modal End -->
+
+<!-- New Time Entry Modal -->
+<div class="modal" tabindex="-1" id="addActivity">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+	<div class="modal-header p-3 mb-2 bg-light text-dark">
+		<h5 class="modal-title">New time entry</h5>
+		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="form-group ">
+					<label class="form-label">Duration</label>
+					<div>
+						<input class="form-control join1 d-inline-block w-auto" type="text" name="duration" placeholder="1h 12m, 1:12 ..." required />
+						<button class="btn btn-primary"><span class="icon"><span class="feather-icon"><i data-feather="play"></i></span> 00:00:00</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group ">
+					<label class="form-label">Matter</label>
+					<p class="">lorem ispum dolor ispm tihe hydr iumrk </p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="form-group">
+					<label class="form-label">Activity Category</label>
+					<select class="form-select">
+						<option selected>Find a Category</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group ">
+					<label class="form-label">Date</label>
+					<input class="form-control join1" type="date" value="" required />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 ">
+				<div class="form-group">
+					<div class="form-label-group">
+						<label class="form-label">Address</label>
+						<small class="text-muted">1200</small>
+					</div>
+					<textarea class="form-control" rows="5"
+						placeholder="Write your address here"></textarea>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="form-group ">
+					<label class="form-label">Firm user</label>
+					<select class="form-select">
+						<option>Zubair Ayub</option>
+					</select>
+				</div>
+				<div class="input-group mb-3">
+					<label class="input-group">Rate</label>
+					<input type="text" class="form-control" placeholder="0.00" aria-label="Username">
+					<span class="input-group-text">hr/</span>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value=""
+								id="flexCheckIndeterminate">
+							<label class="form-check-label" for="flexCheckIndeterminate">
+								Non-Billable
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+
+				<div class="p-3 mb-2 bg-light text-dark">
+					<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save
+						Entry</button>
+					<button type="button"
+						class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and create
+						another</button>
+					<button type="button"
+						class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and
+						duplicate</button>
+					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm"
+						data-bs-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+		<!-- New Time Entry Modal End -->
 
 	</body>
 
