@@ -9,6 +9,12 @@ use App\Models\BillingType;
 use Auth;
 use App\Models\Matter;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Employee;
+use App\Models\Activity_category;
+use App\Models\Time_Entry;
+use App\Models\Expense_Category;
+use App\Models\Expense_Entry;
+
 
 class MatterController extends Controller
 {
@@ -22,7 +28,15 @@ class MatterController extends Controller
         $matter = Matter::find($id);
         $client = Client::where('active',1)->get();
         $billing = BillingType::where('active',1)->get();
-        return view('matter.dashboard',compact('matter','client','billing'));
+        $employee = Employee::where('parent_id',1)->get();
+        $act_category = Activity_category::where('active',1)->get();
+        $exp_cate = Expense_Category::where('active',1)->get();
+       
+        $entry_time = Time_Entry::get()->toArray();
+        $expense_time = Expense_Entry::get()->toArray();
+        $activity = array_merge($entry_time,$expense_time);
+
+        return view('matter.dashboard',compact('matter','client','billing','employee','act_category','exp_cate','activity'));
     }
     public function create()
     {
@@ -120,5 +134,43 @@ class MatterController extends Controller
 
         return 'done';
     }
+
+    public function time_entry(Request $request)
+    {
+       $time_entry = new Time_Entry();
+       $time_entry->duration = $request->duration;
+       $time_entry->matter_id = $request->matter_id;
+       $time_entry->activity_cat_id = $request->act_cate_id;
+       $time_entry->user_id = $request->firm;
+       $time_entry->date = $request->date;
+       $time_entry->address  = $request->address;
+       $time_entry->rate  = $request->rate;
+       $time_entry->billable  = 1;
+
+       $time_entry->save();
+       return redirect()->back();
+    }
+    public function exp_entry(Request $request)
+    {
+       $exp_entry = new Expense_Entry();
+       $exp_entry->expense_type = $request->exp_type;
+       $exp_entry->expense_id = $request->exp_cate;
+       $exp_entry->matter_id = $request->matter_id;
+       $exp_entry->user_id = $request->firm;
+       $exp_entry->date = $request->date;
+       $exp_entry->address  = $request->address;
+       $exp_entry->amount  = $request->amount;
+       $exp_entry->reference  = $request->ref;
+
+       $exp_entry->save();
+       return redirect()->back();
+    }
+    public function activity()
+    {
+      
+
+
+    }
+
 
 }

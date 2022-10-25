@@ -519,9 +519,10 @@
 													</tr>
 												</thead>
 												<tbody>
+													@forelse ($activity as $item)
 													<tr>
 														<td></td>
-														<td>Type</td>
+														<td>$%</td>
 														<td>13 Jan, 2020</td>
 														<td>0.01h</td>
 														<td><span class="badge badge-light">draft</span></td>
@@ -566,7 +567,9 @@
 															</div>
 														</td>
 													</tr>
-
+													@empty
+														
+													@endforelse
 												</tbody>
 											</table>
 										</div>
@@ -615,6 +618,8 @@
 <div class="modal" tabindex="-1" id="addExpense">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
+			<form action="{{route('exp_entry')}}" method="post">
+				@csrf
 			<div class="modal-header bg-light text-black">
 				<h5 class="modal-title">New Expense Entry</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -623,7 +628,7 @@
 				<div class="col-lg-12">
 					<div class="form-check">
 						<h6>Expense Type</h6>
-						<input class="form-check-input" type="radio" name="flexRadioDefault"
+						<input class="form-check-input" type="radio" name="exp_type"
 							id="flexRadioDefault1" checked>
 						<label class="form-check-label" for="flexRadioDefault1">
 							<b>Disbursement:</b> expense requiring payment to avendor on behalf of a
@@ -631,7 +636,7 @@
 						</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="flexRadioDefault"
+						<input class="form-check-input" type="radio" name="exp_type"
 							id="flexRadioDefault2">
 						<label class="form-check-label" for="flexRadioDefault2">
 							<b>Expense Recoveries:</b> expense not linked directly to a vendor
@@ -643,9 +648,13 @@
 					<div class="col-lg-12">
 						<div class="form-group">
 							<label class="form-label">Expense Category</label>
-							<select class="form-select">
-								<option selected>Select an expense category</option>
-
+							<select class="form-select" name="exp_cate">
+								<option>Select</option>
+								@forelse ($exp_cate as $item)
+						<option value="{{$item->id}}">{{$item->name}}</option>
+						@empty
+							
+						@endforelse
 							</select>
 						</div>
 					</div>
@@ -654,7 +663,7 @@
 							<label class="form-label">Amount</label>
 							<div class="input-group flex-nowrap">
 								<span class="input-group-text" id="addon-wrapping">Rs</span>
-								<input type="text" class="form-control" placeholder="00.1" aria-label="Username"
+								<input type="text" class="form-control" name="amount" placeholder="00.1" aria-label="Username"
 									aria-describedby="addon-wrapping">
 							</div>
 						</div>
@@ -662,12 +671,12 @@
 					<div class="col-lg-6">
 						<div class="form-group">
 							<label class="form-label">Reference</label>
-							<input type="text" class="form-control" placeholder="Enter cheque reference number"
+							<input type="text" class="form-control" name="ref" placeholder="Enter cheque reference number"
 								aria-label="Username" aria-describedby="addon-wrapping">
 							</select>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					{{-- <div class="col-lg-6">
 						<div class="form-group">
 							<label class="form-label">Vender</label>
 							<select class="form-select">
@@ -675,11 +684,12 @@
 
 							</select>
 						</div>
-					</div>
+					</div> --}}
 					<div class="col-lg-6">
 						<div class="form-group">
 							<label class="form-label">Matter</label>
-							<p>Hello World</p>
+							<p>{{$matter->description}}</p>
+							<input type="hidden"  name="matter_id" value="{{$matter->id}}" id="">
 						</div>
 					</div>
 					<div class="row">
@@ -689,20 +699,25 @@
 									<label class="form-label">Address</label>
 									<small class="text-muted">1200</small>
 								</div>
-								<textarea class="form-control" rows="5"
+								<textarea class="form-control" name="address" rows="5"
 									placeholder="Write your address here"></textarea>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="form-group ">
 								<label class="form-label">Date</label>
-								<input class="form-control join1" type="date" value="" required />
+								<input class="form-control join1" name="date" type="date" value="" required />
 							</div>
 							<div class="form-group mb-3">
 								<div class="form-group">
 									<label class="form-label">Firm</label>
-									<select class="form-select">
-										<option>Zubair Ayub</option>
+									<select class="form-select" name="firm">
+										<option value="">Select</option>
+										@forelse ($employee as $item)
+										<option value="{{$item->id}}">{{$item->emp_name}}</option>
+										@empty
+											
+										@endforelse
 
 									</select>
 								</div>
@@ -713,7 +728,7 @@
 			</div>
 			<div class="modal-footer">
 				<div class="p-3 mb-2 bg-light text-dark">
-					<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save
+					<button type="submit"  class="btn btn-outline-primary-btn btn-primary btn-sm">Save
 						Entry</button>
 					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and
 						create another</button>
@@ -723,6 +738,7 @@
 						data-bs-dismiss="modal">Cancel</button>
 				</div>
 			</div>
+		</form>
 		</div>
 	</div>
 </div>
@@ -737,6 +753,8 @@
 		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	</div>
 	<div class="modal-body">
+		<form action="{{route('time_entry')}}" method="post">
+			@csrf
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="form-group ">
@@ -750,7 +768,8 @@
 			<div class="col-lg-6">
 				<div class="form-group ">
 					<label class="form-label">Matter</label>
-					<p class="">lorem ispum dolor ispm tihe hydr iumrk </p>
+					<p class="">{{$matter->description}} </p>
+					<input type="hidden" name="matter_id" value="{{$matter->id}}">
 				</div>
 			</div>
 		</div>
@@ -758,16 +777,20 @@
 			<div class="col-lg-6">
 				<div class="form-group">
 					<label class="form-label">Activity Category</label>
-					<select class="form-select">
-						<option selected>Find a Category</option>
-
+					<select class="form-select" name="act_cate_id">
+						<option value="">Select</option>
+						@forelse ($act_category as $item)
+						<option value="{{$item->id}}">{{$item->name}}</option>
+						@empty
+							
+						@endforelse
 					</select>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				<div class="form-group ">
 					<label class="form-label">Date</label>
-					<input class="form-control join1" type="date" value="" required />
+					<input class="form-control join1" type="date" value="" name="date" required />
 				</div>
 			</div>
 		</div>
@@ -778,26 +801,31 @@
 						<label class="form-label">Address</label>
 						<small class="text-muted">1200</small>
 					</div>
-					<textarea class="form-control" rows="5"
+					<textarea class="form-control" name="address" rows="5"
 						placeholder="Write your address here"></textarea>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				<div class="form-group ">
 					<label class="form-label">Firm user</label>
-					<select class="form-select">
-						<option>Zubair Ayub</option>
+					<select class="form-select" name="firm">
+						<option value="">Select</option>
+					@forelse ($employee as $item)
+					<option value="{{$item->id}}">{{$item->emp_name}}</option>
+					@empty
+						
+					@endforelse
 					</select>
 				</div>
 				<div class="input-group mb-3">
 					<label class="input-group">Rate</label>
-					<input type="text" class="form-control" placeholder="0.00" aria-label="Username">
+					<input type="text" name="rate" class="form-control" placeholder="0.00" aria-label="Username">
 					<span class="input-group-text">hr/</span>
 				</div>
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value=""
+							<input class="form-check-input" type="checkbox" name="billable" value=""
 								id="flexCheckIndeterminate">
 							<label class="form-check-label" for="flexCheckIndeterminate">
 								Non-Billable
@@ -809,7 +837,7 @@
 			<div class="modal-footer">
 
 				<div class="p-3 mb-2 bg-light text-dark">
-					<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save
+					<button type="submit" class="btn btn-outline-primary-btn btn-primary btn-sm">Save
 						Entry</button>
 					<button type="button"
 						class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and create
@@ -822,6 +850,7 @@
 				</div>
 			</div>
 		</div>
+	</form>
 	</div>
 </div>
 </div>
