@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Source;
+namespace App\Http\Controllers\Source\Clients;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,18 +10,19 @@ use Auth;
 use App\Models\Employee;
 use Illuminate\Support\Facades\Hash;
 
-class EmployeeController extends Controller
+class ClientController extends Controller
 {
     public function index()
     {
-        $employee = Employee::where();
-        return view('employee.index');
+        //$employee = Employee::where('parent_id',Auth::user()->id)->get();
+        return view('client.index');
     }
     public function create()
     {
-        $department = Department::get();
-        $designation = Designation::get();
-        return view('employee.create',compact('department','designation'));
+     //   $department = Department::get();
+      //  $designation = Designation::get();
+        //return view('employee.create',compact('department','designation'));
+        return view('client.create');
     }
     public function store(Request $request)
     {
@@ -30,22 +31,6 @@ class EmployeeController extends Controller
             'emp_id' => 'required|numeric|max:25',
             'emp_email' => 'required|email|max:255',
             'emp_name' => 'required|max:25',
-            'emp_password' => 'required|numeric|max:25',
-            'emp_slack' => 'required|max:25',
-            'emp_join_date' => 'required|date|max:25',
-            'emp_exit' => 'required|date|max:25',
-            'emp_gender' => 'required|max:25',
-            'emp_address' => 'required|max:255',
-            'emp_skills' => 'required|max:50',
-            'designation' => 'required',
-            'department' => 'required',
-            'mobile' => 'required|numeric|max:25',
-            'hourly_rate' => 'required|numeric|max:25',
-            'is_login' => 'required',
-            'emp_notification' => 'required',
-            'language' => 'required',
-            'image' => 'required',
-
 
         ]);
 
