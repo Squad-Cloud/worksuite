@@ -14,4 +14,8 @@ class Matter extends Model
     {
         return $this->belongsTo(Client::class, 'cleint_id','id');
     }
+    public function billing()
+    {
+        return $this->belongsTo(BillingType::class, 'billing_type_id','id');
+    }
 }
