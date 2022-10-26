@@ -301,12 +301,6 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('all_document')}}"><span class="nav-link-text">View All Documents</span></a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_document')}}"><span class="nav-link-text">Upload Document</span></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_note')}}"><span class="nav-link-text">Add Notes</span></a>
-                                        </li>
                                     </ul>	
                                 </li>	
                             </ul>	

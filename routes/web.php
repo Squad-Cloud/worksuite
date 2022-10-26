@@ -14,6 +14,8 @@ use App\Http\Controllers\Source\Billing\BillController;
 use App\Http\Controllers\Source\Accounts\AccountController;
 use App\Http\Controllers\Source\Documents\DocumentController;
 use App\Http\Controllers\Source\Reports\ReportController;
+use App\Http\Controllers\Source\FileManagerController;
+
 
 
 
@@ -99,6 +101,10 @@ Route::post('exp_entry', [MatterController::class, 'exp_entry'])->name('exp_entr
 Route::post('activity', [MatterController::class, 'activity'])->name('activity');
 
 
+// File Manager
+Route::get('filemanager', [FileManagerController::class, 'index'])->name('all_document');
+
+
 // Billing Routes
 Route::get('add_bill', [BillController::class, 'create'])->name('add_bill');
 Route::get('all_bill', [BillController::class, 'index'])->name('all_bill');
@@ -108,9 +114,9 @@ Route::get('add_account', [AccountController::class, 'create'])->name('add_accou
 Route::get('all_account', [AccountController::class, 'index'])->name('all_account');
 
 // Documents Routes
-Route::get('add_document', [DocumentController::class, 'create'])->name('add_document');
-Route::get('add_note', [DocumentController::class, 'create'])->name('add_note');
-Route::get('all_document', [DocumentController::class, 'index'])->name('all_document');
+// Route::get('add_document', [DocumentController::class, 'create'])->name('add_document');
+// Route::get('add_note', [DocumentController::class, 'create'])->name('add_note');
+// Route::get('all_document', [DocumentController::class, 'index'])->name('all_document');
 
 // Reports Routes
 Route::get('task_report', [ReportController::class, 'create'])->name('task_report');
