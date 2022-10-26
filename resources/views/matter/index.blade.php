@@ -94,7 +94,7 @@
                 },
           type: 'post',
           success: function(res){
-            location.reload();
+            document.location.href='all_matter';
           }
         })
         } else {

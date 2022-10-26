@@ -27,20 +27,20 @@ class EmployeeController extends Controller
     {
 
         $validated = $request->validate([
-            'emp_id' => 'required|numeric|max:25',
-            'emp_email' => 'required|email|max:255',
-            'emp_name' => 'required|max:25',
-            'emp_password' => 'required|numeric|max:25',
-            'emp_slack' => 'required|max:25',
-            'emp_join_date' => 'required|date|max:25',
-            'emp_exit' => 'required|date|max:25',
-            'emp_gender' => 'required|max:25',
-            'emp_address' => 'required|max:255',
-            'emp_skills' => 'required|max:50',
+            'emp_id' => 'required|numeric',
+            'emp_email' => 'required|email',
+            'emp_name' => 'required',
+            'emp_password' => 'required|numeric',
+            'emp_slack' => 'required',
+            'emp_join_date' => 'required',
+            'emp_exit' => 'required',
+            'emp_gender' => 'required',
+            'emp_address' => 'required',
+            'emp_skills' => 'required',
             'designation' => 'required',
             'department' => 'required',
-            'mobile' => 'required|numeric|max:25',
-            'hourly_rate' => 'required|numeric|max:25',
+            'mobile' => 'required|numeric',
+            'hourly_rate' => 'required|numeric',
             'is_login' => 'required',
             'emp_notification' => 'required',
             'language' => 'required',
@@ -79,8 +79,8 @@ class EmployeeController extends Controller
         $employee = new Employee();
         $employee->emp_id = $emp_id;
         $employee->emp_name = $name;
-        $employee->emp_email = $emp_email;
-        $employee->emp_password = $password;
+        $employee->email = $emp_email;
+        $employee->password = $password;
         $employee->parent_id = Auth::user()->id;
         $employee->slack = $slack;
         $employee->joining_date = $joindate;
@@ -99,6 +99,8 @@ class EmployeeController extends Controller
 
         $employee->save();
 
+        $employee = Employee::with('department')->with('designation')->where('parent_id',Auth::user()->id)->get();
+        return view('employee.index',compact('employee'));
 
     }
 
