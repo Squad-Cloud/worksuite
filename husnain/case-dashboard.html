@@ -470,7 +470,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade show active" id="activities">
+							<div class="tab-pane" id="activities">
 								<div class="card card-border mb-0 h-100">
 									<div class="card-header card-header-action">
 										<h6>Activities</h6>
@@ -573,32 +573,266 @@
 								</div>
 							</div>
 							<div class="tab-pane" id="calendar">
-								<p>calender</p>
+								<div class="card card-border mb-0 h-100">
+									<div class="card-header card-header-action">
+										<h6>Calendar Events</h6>
+										<div>
+											<a class="btn btn-soft-primary" data-bs-toggle="modal"
+												data-bs-target="#newEventModal" href="#">
+												<span class="nav-link-text"><span class="icon">
+													<span class="feather-icon"><i data-feather="plus"></i></span></span> New
+													Event</span>
+											</a>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="contact-list-view">
+											<table id="datable_custom" class="table nowrap w-100 mb-5">
+												<thead>
+													<tr>
+														<th>Start</th>
+														<th>End</th>
+														<th>Title and Description</th>
+														<th>Calendar</th>
+														<th>Attendees</th>
+														<th>Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>13 Jan, 2020</td>
+														<td>13 Jan, 2020</td>
+														<td>hello world</td>
+														<td>0.01h</td>
+														<td><span class="badge badge-light">Yes</span></td>
+														<td>Client One</td>
+														 
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="btn-group selectable-split-dropdown">
+																	<button type="button"
+																		class="btn btn-outline-light btn-dyn-text w-100p">Edit</button>
+																	<button type="button"
+																		class="btn btn-outline-light dropdown-toggle dropdown-toggle-split me-3"
+																		data-bs-toggle="dropdown" aria-haspopup="true"
+																		aria-expanded="false">
+																		<span class="sr-only">Toggle Dropdown</span>
+																	</button>
+																	<div class="dropdown-menu dropdown-menu-end">
+																		<a class="dropdown-item" href="#">Duplicate</a>
+																		<a class="dropdown-item" href="#">Delete</a>
 
+																	</div>
+																</div>
+																<div class="d-flex">
+
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="" data-bs-original-title="Edit"
+																		href="contact-details.html"><span
+																			class="btn-icon-wrap"><span
+																				class="feather-icon"><i
+																					data-feather="edit"></i></span></span></a>
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover del-button"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="" data-bs-original-title="Delete"
+																		href="#"><span class="btn-icon-wrap"><span
+																				class="feather-icon"><i
+																					data-feather="trash-2"></i></span></span></a>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="tab-pane" id="communication">
 								<p>Communication</p>
-
 							</div>
 							<div class="tab-pane" id="notes">
 								<p>Notes</p>
-
 							</div>
 							<div class="tab-pane" id="documents">
-								<p>Documents</p>
+								<div class="card card-border mb-0 h-100">
+									<div class="card-header card-header-action">
+										<h6>Documents</h6>
+										<div class="dropdown">
+											<button aria-expanded="false" data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">New</button>
+											<div role="menu" class="dropdown-menu">
+												<input type="file" id="uploadFile" name="uploadFile" style="visibility: hidden; width: 1px; height: 1px" />
+												<a class="dropdown-item" href="#" onclick="document.getElementById('uploadFile').click(); return false">Upload Files</a>
+												<input type="file" webkitdirectory mozdirectory id="uploadFolder" name="uploadFolder" style="visibility: hidden; width: 1px; height: 1px" />
+												<a class="dropdown-item" href="#" onclick="document.getElementById('uploadFolder').click(); return false">Upload folder</a>
+												<a class="dropdown-item" href="#">Create a new folder</a>
+												<div class="dropdown-divider"></div>
+												<a class="dropdown-item" href="#">Create a new document from template</a>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="document-list-view">
+											<table id="datable_custom" class="table nowrap w-100 mb-5">
+												<thead>
+													<tr>
+														<th><span class="form-check mb-0">
+															<input type="checkbox" class="form-check-input check-select-all" id="customCheck1">
+															<label class="form-check-label" for="customCheck1"></label>
+															</span>
+														</th>
+														<th>Uploaded date</th>
+														<th>Category</th>
+														<th>Last edit at</th>
+														<th>Record time</th>
+														<th>Name</th>
+														<th>Received at</th>
+														<th>Comments</th>
+														<th>Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td>13 Jan, 2020</td>
+														<td>Agreement</td>
+														<td>13 Jan, 2020</td>
+														<td><span class="badge badge-light">--</span></td>
+														<td>Hello World</td>
+														<td>---</td>
+														<td><a href="#" data-bs-toggle="modal" data-bs-target="#commentModal">Add comment</a></td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="btn-group selectable-split-dropdown">
+																	<button type="button"
+																		class="btn btn-outline-light btn-dyn-text w-100p">Edit</button>
+																	<button type="button"
+																		class="btn btn-outline-light dropdown-toggle dropdown-toggle-split me-3"
+																		data-bs-toggle="dropdown" aria-haspopup="true"
+																		aria-expanded="false">
+																		<span class="sr-only">Toggle Dropdown</span>
+																	</button>
+																	<div class="dropdown-menu dropdown-menu-end">
+																		<a class="dropdown-item" href="#">Duplicate</a>
+																		<a class="dropdown-item" href="#">Delete</a>
 
+																	</div>
+																</div>
+																<div class="d-flex">
+
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="" data-bs-original-title="Edit"
+																		href="contact-details.html"><span
+																			class="btn-icon-wrap"><span
+																				class="feather-icon"><i
+																					data-feather="edit"></i></span></span></a>
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover del-button"
+																		data-bs-toggle="tooltip" data-bs-placement="top"
+																		title="" data-bs-original-title="Delete"
+																		href="#"><span class="btn-icon-wrap"><span
+																				class="feather-icon"><i
+																					data-feather="trash-2"></i></span></span></a>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>							
 							</div>
-							<div class="tab-pane" id="task">
-								<p>Tasks</p>
-
+							<div class="tab-pane" id="tasks">
+								<div class="card card-border mb-0 h-100">
+									<div class="card-header card-header-action">
+										<h6>Tasks</h6>
+										<div>
+											<a class="btn btn-soft-primary" data-bs-toggle="modal"
+												data-bs-target="#newTaskModal" href="#">
+												<span class="nav-link-text"><span class="icon"><span class="feather-icon"><i data-feather="plus"></i></span></span> New Task</span>
+											</a>
+											<a class="btn btn-soft-primary" data-bs-toggle="modal"
+												data-bs-target="#taskListModal" href="#">
+												<span class="nav-link-text"><span class="icon"><span class="feather-icon"><i data-feather="plus"></i></span></span> Assign task list</span>
+											</a>
+											
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="contact-list-view">
+											<table id="datable_task" class="table nowrap w-100 mb-5">
+												<thead>
+													<tr>
+														<th>Due date</th>
+														<th>Name and Description</th>
+														<th>Assigned by</th>
+														<th>Assigned to</th>
+														<th>Recorded time</th>
+														<th>Status</th>
+														<th>Task Type</th>
+														<th>Time extimate</th>
+														<th>Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>13 Jan, 2020</td>
+														<td>hello world</td>
+														<td>Client One</td>
+														<td>Client Two</td>
+														<td>1h:20m</td>
+														<td><span class="badge badge-danger">pending</span></td>
+														<td>----</td>
+														<td>----</td>
+														<td>
+															<div class="d-flex align-items-center">
+																<div class="btn-group selectable-split-dropdown">
+																	<button type="button"
+																		class="btn btn-outline-light btn-dyn-text w-100p">Mark Complete</button>
+																	<button type="button"
+																		class="btn btn-outline-light dropdown-toggle dropdown-toggle-split me-3"
+																		data-bs-toggle="dropdown" aria-haspopup="true"
+																		aria-expanded="false">
+																		<span class="sr-only">Toggle Dropdown</span>
+																	</button>
+																	<div class="dropdown-menu dropdown-menu-end">
+																		<a class="dropdown-item" href="#">Add Time</a>
+																		<a class="dropdown-item" href="#">Print task</a>
+																	</div>
+																</div>
+																<div class="d-flex">
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit"
+																	href="contact-details.html">
+																	<span class="btn-icon-wrap">
+																		<span class="feather-icon">
+																			<i data-feather="edit"></i>
+																		</span>
+																	</span></a>
+																	<a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover del-button"
+																	data-bs-toggle="tooltip" data-bs-placement="top"
+																	title="" data-bs-original-title="Delete" href="#"><span class="btn-icon-wrap">
+																		<span class="feather-icon">
+																			<i data-feather="trash-2"></i>
+																		</span>
+																	</span>
+																	</a>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="tab-pane" id="bills">
 								<p>Bills</p>
-
 							</div>
 							<div class="tab-pane" id="transaction">
 								<p>Transactions</p>
-
 							</div>
 						</div>
 					</div>
@@ -846,8 +1080,320 @@
 </div>
 </div>
 </div>
-		<!-- New Time Entry Modal End -->
+<!-- New Time Entry Modal End -->
+<!-- Comment Modal -->
+<div class="modal" tabindex="-1" id="commentModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header p-3 mb-2 bg-light text-dark">
+				<h5 class="modal-title">Add Comment</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-12 ">
+						<div class="form-group">
+							<div class="form-label-group">
+								<label class="form-label">Comment</label>
+								<!-- <small class="text-muted">1200</small> -->
+							</div>
+							<textarea class="form-control" rows="5"
+								placeholder="Write your comment here"></textarea>
+						</div>
+					</div>
 
-	</body>
+					<div class="modal-footer">
 
-</html>
+						<div class="p-3 mb-2 bg-light text-dark">
+							<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Post
+								</button>
+							
+							
+							<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm"
+								data-bs-dismiss="modal">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Comment Modal End -->
+
+<!-- New Event Modal -->
+<div class="modal" tabindex="-1" id="newEventModal">
+	<div class="modal-dialog modal-fullscreen">
+	  	<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">New Event</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<h5>Event Details</h5>
+					<div class="row gx-3">
+						<div class="col-md-8 col-sm-12">
+							<div class="form-group">
+								<label class="form-label">Title</label>
+								<input class="form-control" type="text" value="" />
+							</div>
+						</div>
+					</div>
+					<div class="row gx-3">
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<div class="form-group ">
+									<label class="form-label">Start Time</label>
+									<input class="form-control join1" type="date" value="" required />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<div class="form-group ">
+									<label class="form-label">Time</label>
+									<input class="form-control join1" type="time" value="" required />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<div class="form-group ">
+									<label class="form-label">End Time</label>
+									<input class="form-control join1" type="date" value="" required />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="form-group">
+								<div class="form-group ">
+									<label class="form-label">Time</label>
+									<input class="form-control join1" type="time" value="" required />
+								</div>
+							</div>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+							<label class="form-check-label" for="flexCheckDefault">All day</label>
+						</div>
+						<div class="col-md-8  col-sm-12">
+							<div class="form-group">
+								<label class="form-label">Location</label>
+								<input class="form-control" type="text" value="" />
+							</div>
+						</div>
+
+						<div class="col-md-8  col-sm-12">
+							<div class="form-group">
+								<label class="form-label">Matter</label>
+								<select class="form-select">
+									<option>000.1</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-8 col-sm-12">
+							<div class="form-group">
+								<label class="form-label">Reminders</label>
+								<div id="new_reminder"></div>
+								<button class="btn btn-soft-primary" onclick="rowFunction()">Add new reminder</button>
+								
+							</div>
+						</div>
+						<div class="col-md-8  col-sm-12">
+							<div class="form-group">
+								<label class="form-label">Save to this calender</label>
+								<select class="form-select">
+									<option selected>Zubair ayub</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+							<label class="form-check-label" for="flexCheckDefault1">Add this event to the firm  calender as well as the selected calender</label>
+						</div>
+						<div class="col-md-8 col-sm-12">
+							<div class="form-group">
+								<h5>Invite Attendance</h5>
+								<label class="form-label">find firm user or contacts to invite</label>
+								<select class="form-select">
+									<option>Type in name</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-8  col-sm-12">
+							<label for="exampleFormControlTextarea1" class="form-group"><b>Description</b></label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer justify-content-center">
+				<div class="p-3 mb-2 bg-light text-dark">
+					<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save Event</button>
+					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and create another</button>
+					<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm" data-bs-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+	  	</div>
+	</div>
+</div>
+<!-- New Task Modal -->
+<div class="modal" tabindex="-1" id="newTaskModal">
+	<div class="modal-dialog modal-lg">
+	  	<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">New Task</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+		<div class="modal-body">
+			<h5>Details</h5>
+			<div class="row gx-3">
+				<div class="col-md-8 col-sm-12">
+					<div class="form-group">
+						<label class="form-label">Name</label>
+						<input class="form-control" placeholder="Enter task name" type="text" value="" />
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="form-group">
+						<label class="form-label">Priority</label>
+						<select class="form-select">
+							<option>Normal</option>       
+						</select>
+					</div>
+				</div>
+			
+				<div class="col-md-12 col-sm-12">
+					<div class="form-group">
+						<div class="form-label-group">
+							<label class="form-label">Description</label>
+							<!-- <small class="text-muted">1200</small> -->
+						</div>
+						<textarea class="form-control" rows="5"
+							placeholder="Enter task description"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row gx-3">               
+				<div class="col-md-8 col-sm-12">
+					<div class="form-group">
+						<label class="form-label">Assign to</label>
+						<select class="form-select">
+							<option>Zubair ayub</option>       
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<div class="form-group">
+					<label class="form-label">Task type</label>
+					<select class="form-select">
+						<option>Find a tast type</option>       
+					</select>
+				</div>
+			 </div>
+			 <div class="row">
+				<div class="col-md-8 col-sm-12">
+					<div class="form-group">
+						<label class="form-label">Task Status</label>
+						<select class="form-select">
+							<option>Pending</option>       
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="form-group">
+						<label class="form-label">Time estimate</label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+			</div>
+			 <div class="col-md-12 col-sm-12">
+				<div class="form-group">
+					<label class="form-label">Matter</label>
+					<select class="form-select">
+						<option>Zubair ayub</option>       
+					</select>
+				</div>
+			 </div>
+			<div class="col-md-10 col-sm-12">
+				<div class="form-group ">
+					<label class="form-label">Select Date</label>
+					<input class="form-control" type="date" value="" required />
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<div class="p-3 mb-2 bg-light text-dark">
+				<button type="button" class="btn btn-outline-primary-btn btn-primary btn-sm">Save Task</button>
+				<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm">Save and create another</button>
+				<button type="button" class="btn btn-outline-primary-btn btn-soft-primary btn-sm" data-bs-dismiss="modal">Cancel</button>
+			
+			</div>		
+		</div>
+	  </div>
+	</div>
+</div>
+<!-- New Task Modal -->
+
+<!-- Assign Task list modal -->
+<div class="modal" tabindex="-1" id="taskListModal">  
+	<div class="modal-dialog">
+	  	<div class="modal-content">
+			<div class="modal-header">
+		  		<h5 class="modal-title">Assign task list</h5>
+		  		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label class="form-label">Task list</label>
+						<select class="form-select">                  
+							<option>Select a task list</option>                
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label class="form-label">Assign to</label>
+						<select class="form-select">
+						<option>Select an assign</option>                
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault22"/>
+						<label class="form-check-label" for="flexCheckDefault22">Assign all task in this list to this assign</label>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault33">
+						<label class="form-check-label" for="flexCheckDefault33">
+						Notify task assignee via email
+						</label>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label class="form-label">Matter</label>
+						<p>000.1 ayub</p>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-group ">
+						<label class="form-label">Trigger Date</label>
+						<input class="form-control join1" type="date" value="" required />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Assign task list</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Assign Task List modal end -->
