@@ -14,6 +14,8 @@ use App\Http\Controllers\Source\Billing\BillController;
 use App\Http\Controllers\Source\Accounts\AccountController;
 use App\Http\Controllers\Source\Documents\DocumentController;
 use App\Http\Controllers\Source\Reports\ReportController;
+use App\Http\Controllers\Source\Departments\DepartmentController;
+
 
 
 
@@ -121,4 +123,6 @@ Route::get('Leave_report', [ReportController::class, 'index'])->name('Leave_repo
 Route::get('Attendance_report', [ReportController::class, 'index'])->name('Attendance_report');
 
 
-
+// Add Department
+Route::get('add_department', [DepartmentController::class, 'create'])->name('add_department');
+Route::get('all_department', [DepartmentController::class, 'index'])->name('all_department');
