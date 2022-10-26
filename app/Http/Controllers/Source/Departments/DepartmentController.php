@@ -88,3 +88,4 @@ class DepartmentController extends Controller
     }
 
 }
+ 
