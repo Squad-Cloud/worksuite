@@ -25,8 +25,10 @@
         </div>
     </div>
 </div></div></div>
-    <!-- File manager -->
+@section('content')     
 
+    <!-- File manager -->
+@push('scripts')
     <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
     <script>
@@ -48,7 +50,4 @@
       });
 
     </script>
-
-</body>
-
-</html>
+    @endpush

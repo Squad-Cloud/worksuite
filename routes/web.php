@@ -16,6 +16,7 @@ use App\Http\Controllers\Source\Documents\DocumentController;
 use App\Http\Controllers\Source\Reports\ReportController;
 use App\Http\Controllers\Source\FileManagerController;
 use App\Http\Controllers\Source\Departments\DepartmentController;
+use App\Http\Controllers\Source\FullCalenderController;
 
 
 
@@ -72,11 +73,11 @@ Route::get('add_tasks', [TaskController::class, 'create'])->name('add_tasks');
 
 
 // Calender Routes
-Route::get('view_calender', [EventController::class, 'index'])->name('view_calender');
+// Route::get('view_calender', [EventController::class, 'index'])->name('view_calender');
 
 
 // Events Routes
-Route::get('add_event', [EventController::class, 'create'])->name('add_event');
+// Route::get('add_event', [EventController::class, 'create'])->name('add_event');
 
 
 // Clients Routes
@@ -104,6 +105,11 @@ Route::post('activity', [MatterController::class, 'activity'])->name('activity')
 
 // File Manager
 Route::get('filemanager', [FileManagerController::class, 'index'])->name('all_document');
+
+// Event Calender
+Route::get('fullcalender', [FullCalenderController::class, 'index'])->name('view_calender');
+
+Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
 
 
 // Billing Routes

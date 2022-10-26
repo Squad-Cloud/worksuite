@@ -403,8 +403,8 @@ class ComposerStaticInit9f4bf6e94413e3e4e1d8218f7183cccc
         ),
         'Intervention\\Image\\' => 
         array (
-            0 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
-            1 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+            0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+            1 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -582,9 +582,11 @@ class ComposerStaticInit9f4bf6e94413e3e4e1d8218f7183cccc
         'App\\Http\\Controllers\\Source\\Activities\\ActivityController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Activities/ActivityController.php',
         'App\\Http\\Controllers\\Source\\Billing\\BillController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Billing/BillController.php',
         'App\\Http\\Controllers\\Source\\Clients\\ClientController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Clients/ClientController.php',
+        'App\\Http\\Controllers\\Source\\Departments\\DepartmentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Departments/DepartmentController.php',
         'App\\Http\\Controllers\\Source\\Documents\\DocumentController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Documents/DocumentController.php',
         'App\\Http\\Controllers\\Source\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/EmployeeController.php',
         'App\\Http\\Controllers\\Source\\Events\\EventController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Events/EventController.php',
+        'App\\Http\\Controllers\\Source\\FileManagerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/FileManagerController.php',
         'App\\Http\\Controllers\\Source\\MatterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/MatterController.php',
         'App\\Http\\Controllers\\Source\\Reports\\ReportController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Reports/ReportController.php',
         'App\\Http\\Controllers\\Source\\Tasks\\TaskController' => __DIR__ . '/../..' . '/app/Http/Controllers/Source/Tasks/TaskController.php',

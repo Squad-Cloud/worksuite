@@ -141,9 +141,6 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{route('view_calender')}}"><span class="nav-link-text">View Calender</span></a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{route('add_event')}}"><span class="nav-link-text">Add Event</span></a>
-                                        </li>
                                     </ul>	
                                 </li>	
                             </ul>	
