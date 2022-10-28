@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication</title>
+    <meta name="description"
+        content="A modern CRM Dashboard Template with reusable and flexible components for your SaaS web applications by hencework. Based on Bootstrap." />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Dropify CSS -->
+    <link href="vendors/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- select2 CSS -->
+    <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="hk-wrapper" data-layout="vertical" data-layout-style="default" data-menu="light" data-footer="simple">
+        <div class="hk-pg-wrapper">
+            <div class="container-xxl">
+                <!-- Page Header -->
+                <div class="hk-pg-header pt-7 pb-4">
+                    <h1 class="pg-title"></h1>
+                    <p> </p>
+                </div>
+                <!-- /Page Header -->
+
+                <!-- Page Body -->
+                <div class="hk-pg-body">
+                    <!-- Start -->
+
+                    <table id="datable_2" class="table nowrap w-100 mb-5">
+                        <thead>
+                            <tr>
+                                <th><span class="form-check mb-0">
+                                        <input type="checkbox" class="form-check-input check-select-all"
+                                            id="customCheck1">
+                                        <label class="form-check-label" for="customCheck1"></label>
+                                    </span>
+                                </th>
+                                <th>Action</th>
+                                <th>Recorded Time</th>
+                                <th>Type</th>
+                                <th>Date and Time</th>
+                                <th>Subject,body and attachment</th>
+                                <th>Matter</th>
+                                <th>From</th>
+                                <th>To</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>13 Jan, 2020</td>
+                                <td>Agreement</td>
+                                <td>13 Jan, 2020</td>
+                                <td><span class="badge badge-light">--</span></td>
+                                <td>Hello World</td>
+                                <td>---</td>
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#commentModal">Add comment</a>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="btn-group selectable-split-dropdown">
+                                            <button type="button"
+                                                class="btn btn-outline-light btn-dyn-text w-100p">Edit</button>
+                                            <button type="button"
+                                                class="btn btn-outline-light dropdown-toggle dropdown-toggle-split me-3"
+                                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="#">Duplicate</a>
+                                                <a class="dropdown-item" href="#">Delete</a>
+
+                                            </div>
+                                        </div>
+                                        <div class="d-flex">
+
+                                            <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                data-bs-original-title="Edit" href="contact-details.html"><span
+                                                    class="btn-icon-wrap"><span class="feather-icon"><i
+                                                            data-feather="edit"></i></span></span></a>
+                                            <a class="btn btn-icon btn-flush-dark btn-rounded flush-soft-hover del-button"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                data-bs-original-title="Delete" href="#"><span
+                                                    class="btn-icon-wrap"><span class="feather-icon"><i
+                                                            data-feather="trash-2"></i></span></span></a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <div class="row">
+                                <h5 class="col-sm-11 mt-1">Communication</h5>
+                                <div class="col-sm-1">
+                                    <div>
+                                        <button class="btn btn-primary btn-sm btn dropdown-toggle" aria-expanded="false"
+                                            data-bs-toggle="dropdown">New</button>
+                                        <div role="menu" class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <button type="button" class="btn btn-light">Light</button> -->
+
+
+
+                                <div class="col-sm-12">
+                                    <ul class="nav nav-line nav-light nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#templates">
+                                                <span class="nav-link-text">Log</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#categories">
+                                                <span class="nav-link-text">Secure Message</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#categories">
+                                                <span class="nav-link-text">Client Portals</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                        </tbody>
+                    </table>
+                    <!-- start ends -->
+                </div>
+                <!-- /Page Body -->
+            </div>
+
+            <!-- Page Footer -->
+            <div class="hk-footer">
+                <footer class="container-xxl footer">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <p class="footer-text"><span class="copy-text">JurisLPM © 2022 All rights reserved.</span>
+                                <a href="#" class="" target="_blank">Privacy Policy</a><span
+                                    class="footer-link-sep">|</span><a href="#" class="" target="_blank">T&C</a><span
+                                    class="footer-link-sep">|</span><a href="#" class="" target="_blank">System
+                                    Status</a>
+                            </p>
+                        </div>
+                        <div class="col-xl-4">
+                            <a href="#" class="footer-extr-link link-default"><span class="feather-icon"><i
+                                        data-feather="external-link"></i></span><u>Send feedback to our help
+                                    forum</u></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- / Page Footer -->
+
+    </div>
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/feather.min.js"></script>
+    <script src="dist/js/dropdown-bootstrap-extended.js"></script>
+    <script src="vendors/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendors/select2/dist/js/select2.full.min.js"></script>
+    <script src="dist/js/select2-data.js"></script>
+    <script src="vendors/dropify/dist/js/dropify.min.js"></script>
+    <script src="dist/js/dropify-data.js"></script>
+    <script src="dist/js/init.js"></script>
+    <script src="dist/js/contact-data.js"></script>
+    <script src="dist/js/chips-init.js"></script>
+    <!-- Tinymce JS -->
+    <script src="vendors/tinymce/tinymce.min.js"></script>
+    <script src="dist/js/tinymce-data.js"></script>
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="vendors/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="dist/js/dataTables-data.js"></script>
+</body>
+
+</html>
