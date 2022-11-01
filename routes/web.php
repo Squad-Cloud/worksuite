@@ -34,8 +34,14 @@ use App\Http\Controllers\Source\FullCalenderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//index
 Route::get('/', function () {
+    return view('site.index');
+});
+
+
+//Auth
+Route::get('login', function () {
     return view('auth.login');
 });
 
