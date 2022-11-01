@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -32,12 +31,11 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/public/'),
         ],
-
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => storage_path('app/public/'.env('MY_PATH')),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],

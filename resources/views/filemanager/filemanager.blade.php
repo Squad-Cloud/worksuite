@@ -2,18 +2,8 @@
 
 @section('content')     
  <!-- Styles -->
-
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
-
  <link href="{{ asset('vendor/file-manager/css/file-manager.css') }}" rel="stylesheet">
-
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
  <div class="hk-wrapper" data-layout="vertical" data-layout-style="default" data-menu="light" data-footer="simple">
-
-
-
     <!-- Main Content -->
     <div class="hk-pg-wrapper">
         <div class="container-xxl">
