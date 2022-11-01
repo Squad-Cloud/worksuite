@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '58d705307d14d6b99672282c09aa92aa9073257e',
+        'reference' => 'be0e118660444ed4cd59e9aedbb64a247901ca44',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'alexusmai/laravel-file-manager' => array(
+            'pretty_version' => 'v2.5.4',
+            'version' => '2.5.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../alexusmai/laravel-file-manager',
+            'aliases' => array(),
+            'reference' => '1ad25434eb321cc208dbd3cecca504bd4f774b57',
+            'dev_requirement' => false,
+        ),
         'asm89/stack-cors' => array(
             'pretty_version' => 'v2.1.1',
             'version' => '2.1.1.0',
@@ -379,6 +388,24 @@
                 0 => 'v8.83.25',
             ),
         ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.2',
+            'version' => '2.7.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'reference' => '04be355f8d6734c826045d02a1079ad658322dad',
+            'dev_requirement' => false,
+        ),
+        'intervention/imagecache' => array(
+            'pretty_version' => '2.5.2',
+            'version' => '2.5.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/imagecache',
+            'aliases' => array(),
+            'reference' => '270d1e72ddff2fc0a6d3c7e6cbc9d23c9ec1e3e4',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -400,7 +427,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '58d705307d14d6b99672282c09aa92aa9073257e',
+            'reference' => 'be0e118660444ed4cd59e9aedbb64a247901ca44',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

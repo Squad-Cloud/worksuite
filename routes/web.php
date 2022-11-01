@@ -14,6 +14,10 @@ use App\Http\Controllers\Source\Billing\BillController;
 use App\Http\Controllers\Source\Accounts\AccountController;
 use App\Http\Controllers\Source\Documents\DocumentController;
 use App\Http\Controllers\Source\Reports\ReportController;
+use App\Http\Controllers\Source\FileManagerController;
+use App\Http\Controllers\Source\Departments\DepartmentController;
+use App\Http\Controllers\Source\FullCalenderController;
+
 
 
 
@@ -69,11 +73,11 @@ Route::get('add_tasks', [TaskController::class, 'create'])->name('add_tasks');
 
 
 // Calender Routes
-Route::get('view_calender', [EventController::class, 'index'])->name('view_calender');
+// Route::get('view_calender', [EventController::class, 'index'])->name('view_calender');
 
 
 // Events Routes
-Route::get('add_event', [EventController::class, 'create'])->name('add_event');
+// Route::get('add_event', [EventController::class, 'create'])->name('add_event');
 
 
 // Clients Routes
@@ -99,6 +103,15 @@ Route::post('exp_entry', [MatterController::class, 'exp_entry'])->name('exp_entr
 Route::post('activity', [MatterController::class, 'activity'])->name('activity');
 
 
+// File Manager
+Route::get('filemanager', [FileManagerController::class, 'index'])->name('all_document');
+
+// Event Calender
+Route::get('fullcalender', [FullCalenderController::class, 'index'])->name('view_calender');
+
+Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+
+
 // Billing Routes
 Route::get('add_bill', [BillController::class, 'create'])->name('add_bill');
 Route::get('all_bill', [BillController::class, 'index'])->name('all_bill');
@@ -106,11 +119,6 @@ Route::get('all_bill', [BillController::class, 'index'])->name('all_bill');
 // Accounts Routes
 Route::get('add_account', [AccountController::class, 'create'])->name('add_account');
 Route::get('all_account', [AccountController::class, 'index'])->name('all_account');
-
-// Documents Routes
-Route::get('add_document', [DocumentController::class, 'create'])->name('add_document');
-Route::get('add_note', [DocumentController::class, 'create'])->name('add_note');
-Route::get('all_document', [DocumentController::class, 'index'])->name('all_document');
 
 // Reports Routes
 Route::get('task_report', [ReportController::class, 'create'])->name('task_report');
@@ -121,4 +129,6 @@ Route::get('Leave_report', [ReportController::class, 'index'])->name('Leave_repo
 Route::get('Attendance_report', [ReportController::class, 'index'])->name('Attendance_report');
 
 
-
+// Add Department
+Route::get('add_department', [DepartmentController::class, 'create'])->name('add_department');
+Route::get('all_department', [DepartmentController::class, 'index'])->name('all_department');
