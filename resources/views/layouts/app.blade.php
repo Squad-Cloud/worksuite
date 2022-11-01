@@ -7,17 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Add Client | JurisLPM</title>
         <meta name="description" content="A modern CRM Dashboard Template with reusable and flexible components for your SaaS web applications by hencework. Based on Bootstrap."/>
-        
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        
         <!-- Bootstrap Dropify CSS -->
         <link href="{{asset('assets/vendors/dropify/dist/css/dropify.min.css')}}" rel="stylesheet" type="text/css"/>
-        
         <!-- select2 CSS -->
         <link href="{{asset('assets/vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
-    
         <!-- CSS -->
         <link href="{{asset('assets/dist/css/style.css')}}" rel="stylesheet" type="text/css">
     </head>
