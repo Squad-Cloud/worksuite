@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        envUpdate('MY_PATH',Auth::user()->lastname);
+        $this->envUpdate('MY_PATH',Auth::user()->lastname);
         return view('home');
     }
 
