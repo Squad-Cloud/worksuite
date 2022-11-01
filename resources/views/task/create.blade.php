@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
-
+<style>
+		.tasklist-cards-wrap{
+			min-height: 80px;
+		}
+	</style>
 
 	<!-- Wrapper -->
 	<div class="hk-wrapper" data-layout="vertical" data-layout-style="collapsed" data-menu="light" data-footer="simple" data-hover="active">
@@ -113,13 +117,13 @@
 															<div class="card-body">
 																<div class="avatar-group avatar-group-overlapped">
 																	<div class="avatar avatar-rounded" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Dean">
-																		<img src="dist/img/avatar13.jpg" alt="user" class="avatar-img">
+																		<img src="assets/dist/img/avatar13.jpg" alt="user" class="avatar-img">
 																	</div>
 																	<div class="avatar avatar-xs avatar-soft-danger avatar-rounded" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Tom">
 																		<span class="initial-wrap">B</span>
 																	</div>
 																	<div class="avatar avatar-rounded" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Danial">
-																		<img src="dist/img/avatar2.jpg" alt="user" class="avatar-img">
+																		<img src="assets/dist/img/avatar2.jpg" alt="user" class="avatar-img">
 																	</div>
 																</div>
 															</div>
@@ -181,7 +185,7 @@
 															<div class="card-body">
 																<div class="avatar-group avatar-group-overlapped">
 																	<div class="avatar avatar-rounded" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Katharine">
-																		<img src="dist/img/avatar8.jpg" alt="user" class="avatar-img">
+																		<img src="assets/dist/img/avatar8.jpg" alt="user" class="avatar-img">
 																	</div>
 																</div>
 															</div>
@@ -377,5 +381,101 @@
 	</div>
     <!-- /Wrapper -->
 
-
+ <!-- Add New Card -->
+	 <div id="add_new_card" class="modal fade add-new-task" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h5 class="mb-4">Create New Card</h5>
+					<form>
+						<div class="row gx-3">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label class="form-label">Name</label>
+									<input class="form-control task-name" type="text"/>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label class="form-label">Start Date</label>
+									<input class="form-control" name="single-date-pick" type="text"/>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label class="form-label">End Date</label>
+									<input class="form-control" name="single-date-pick" type="text"/>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="form-label">Note/Description</label>
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group mt-3">
+									<label class="form-label">Set priority:</label>
+									<div class="form-check form-check-inline">
+										<div class="form-check form-check-primary">
+											<input type="radio" id="customRadioc2" name="customRadioc2" class="form-check-input">
+											<label class="form-check-label" for="customRadioc2">High</label>
+										</div>
+									</div>
+									<div class="form-check form-check-inline">
+										<div class="form-check form-check-primary">
+											<input type="radio" id="customRadioc3" name="customRadioc2" class="form-check-input">
+											<label class="form-check-label" for="customRadioc3">Medium</label>
+										</div>
+									</div>
+									<div class="form-check form-check-inline">
+										<div class="form-check form-check-primary">
+											<input type="radio" id="customRadioc4" name="customRadioc2" class="form-check-input">
+											<label class="form-check-label" for="customRadioc4">Low</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer align-items-center">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary btn-add-task" >Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /Add New Card -->
+<!-- Add Task List -->
+	<div id="add_task_list" class="modal fade add-tasklist-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h5 class="mb-4">Add Task List</h5>
+					<form>
+						<div class="row gx-3">
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label class="form-label">Name</label>
+									<input class="form-control" type="text"/>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer align-items-center">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary btn-add-tasklist" >Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- /Add Task List -->
 @endsection
