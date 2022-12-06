@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $this->envUpdate('MY_PATH',Auth::user()->lastname);
         return view('home');
+    }
+
+    public static function envUpdate($key, $value)
+    {
+        $path = base_path('.env');
+
+        if (file_exists($path)) {
+
+            file_put_contents($path, str_replace(
+                $key . '=' . env($key), $key . '=' . $value, file_get_contents($path)
+            ));
+        }
     }
 }
